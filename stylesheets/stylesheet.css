@@ -2,7 +2,7 @@ body {
     background-image: linear-gradient( -45deg, white 0%, white 50%, #0288D1 50%, #0288D1 50%);
 }
 #name {
-    color: #B3E5FC;   
+    color: white;   
     font-family: Montserrat; /* Should probably find a replacement */
     display: inline-block;
     margin-left: 7%;
@@ -13,11 +13,42 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin-bottom: 10%;
-    margin-right: 10%;
+    margin-bottom: 7%;
+    margin-right: 7%;
 }
 .icon {
     width: 150px;
     height: 150px;
     margin: 50px;
+}
+.small-icon {
+    width: 50px;
+    height: 50px;
+}
+#top-small {
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.hover-click {
+    -webkit-transition: .1s ease-in-out;   
+}
+.hover-click:hover {
+     -webkit-transform: scale(1.1);
+}
+.hover-click:active {
+    -webkit-transform: scale(.9);
+    opacity: 0.7;
+}
+#certifications {
+    color: #B3E5FC;
+    display: inline-block;
+    font-family: Montserrat;
+    font-size: 24px;
+    margin-top: 7%;
+    margin-left: 2%;
+    line-height: 200%;
+}
+#explore {
+    font-family: Montserrat;
+    font-size: 36px;
 }
