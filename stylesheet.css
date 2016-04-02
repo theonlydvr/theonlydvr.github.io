@@ -1,0 +1,273 @@
+.hex:before {
+    content: " ";
+    width: 0; height: 0;
+    border-bottom: 120px solid rgba(76,76,166, 0.5);
+    border-left: 208px solid transparent;
+    border-right: 208px solid transparent;
+    position: absolute;
+    top: -120px;
+    left: 0px;
+}
+
+.hex {
+    width: 416px;
+    height: 240px;
+    background-color: rgba(76,76,166, 0.5);
+    position: relative;
+    
+}
+
+.hex:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -120px;
+    border-top: 120px solid rgba(76,76,166, 0.5);
+    border-left: 208px solid transparent;
+    border-right: 208px solid transparent;
+    left: 0px;
+    
+}
+
+.project:hover {
+    -ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+}
+
+#origami {}
+#origami-text {}
+#android {}
+#android-text {}
+#pokemon {}
+#pokemon-text {}
+#steam {}
+#steam-text {}
+#league {}
+#league-text {}
+#words {}
+#words-text {}
+#room {}
+#room-text {}
+#desktop {}
+#desktop-text {}
+
+.fade-text {
+    opacity: 0;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    pointer-events: none;
+}
+
+#origami:hover + #origami-text {
+    opacity: 1;
+    -ms-transform: translate(0, -1.5em); /* IE 9 */
+    -webkit-transform: translate(0, -1.5em); /* Chrome, Safari, Opera */
+    transform: translate(0, -1.5em);
+}
+
+#android:hover + #android-text {
+    opacity: 1;
+    -ms-transform: translate(0, -2.5em); /* IE 9 */
+    -webkit-transform: translate(0, -2.5em); /* Chrome, Safari, Opera */
+    transform: translate(0, -2.5em);
+}
+
+#pokemon:hover + #pokemon-text {
+    opacity: 1;
+    -ms-transform: translate(-3vw, 5.5vw); /* IE 9 */
+    -webkit-transform: translate(-3vw, 5.5vw); /* Chrome, Safari, Opera */
+    transform: translate(-3vw, 5.5vw);
+}
+
+#steam:hover + #steam-text {
+    opacity: 1;
+    -ms-transform: translate(-7vw, 0); /* IE 9 */
+    -webkit-transform: translate(-7vw, 0); /* Chrome, Safari, Opera */
+    transform: translate(-7vw, 0);
+}
+
+#league:hover + #league-text {
+    opacity: 1;
+    -ms-transform: translate(-3vw, -5.5vw); /* IE 9 */
+    -webkit-transform: translate(-3vw, -5.5vw); /* Chrome, Safari, Opera */
+    transform: translate(-3vw, -5.5vw);
+}
+
+#words:hover + #words-text {
+    opacity: 1;
+    -ms-transform: translate(3vw, -5vw); /* IE 9 */
+    -webkit-transform: translate(3vw, -5vw); /* Chrome, Safari, Opera */
+    transform: translate(3vw, -5vw);
+}
+
+#room:hover + #room-text {
+    opacity: 1;
+    -ms-transform: translate(3.5vw, 5.5vw); /* IE 9 */
+    -webkit-transform: translate(3.5vw, 5.5vw); /* Chrome, Safari, Opera */
+    transform: translate(3.5vw, 5.5vw);
+}
+
+#desktop:hover + #desktop-text {
+    opacity: 1;
+    -ms-transform: translate(7vw, 0); /* IE 9 */
+    -webkit-transform: translate(7vw, 0); /* Chrome, Safari, Opera */
+    transform: translate(7vw, 0);
+}
+
+#cv {
+    background-size: cover;
+    float:right; 
+    width: 5vw; 
+    height: 5vw;
+    margin-right: 8%;
+    background-image: url(cv_selected.png);
+}
+
+#cv:hover {
+    background-image: url(cv.png);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url('Futura_ICG_Book_Oblique.ttf') format("truetype")
+}
+
+.contact:before {
+    content: " ";
+    width: 0; height: 0;
+    border-bottom: 30px solid #293061;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+    position: absolute;
+    top: -30px;
+    left: 0px;
+}
+
+.contact {
+    width: 104px;
+    height: 60px;
+    background-size: cover;
+    position: relative;  
+    margin: 0 auto;
+}
+
+#facebook {
+    background-image: url(facebook.png);
+}
+
+#github {
+    background-image: url(github.png);
+}
+
+#mail {
+    background-image: url(mail.png);
+    cursor: pointer;
+}
+
+.contact:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -30px;
+    border-top: 30px solid #293061;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+    left: 0px;
+    
+}
+
+#facebook:hover {
+    background-image: url(facebook_selected.png);
+}
+
+#github:hover {
+    background-image: url(github_selected.png);
+}
+
+#mail:hover {
+    background-image: url(mail_selected.png);
+}
+
+.contact:hover:after {
+    border-top: 30px solid #A6A6D4;
+}
+
+.contact:hover:before {
+    border-bottom: 30px solid #A6A6D4;
+}
+
+.love {
+    display: inline-block;
+    position: relative;
+    top: .2em;
+    font-size: 1.4em;
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    transform: scale(.9);
+    -webkit-animation: love .5s infinite linear alternate-reverse;
+    -moz-animation: love .5s infinite linear alternate-reverse;
+    animation: love .5s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes love {
+    to {-webkit-transform: scale(1.2);}
+}
+
+@-moz-keyframes love {
+    to {-moz-transform: scale(1.2);}
+}
+@keyframes love {
+    to {transform: scale(1.2);}
+}
+
+#play_white {
+    background-image: url('play_white.png');
+}
+
+#play_dark {
+    background-image: url('play_dark.png');
+}
+
+#apple_white {
+    background-image: url('apple_white.png');
+}
+
+#apple_dark {
+    background-image: url('apple_dark.png');
+}
+
+.play {
+    width: 3vw; 
+    height: 3vw; 
+    float: right; 
+    margin-top: 10%;
+    background-size: cover;
+}
+
+.apple {
+    margin-right: 5%; 
+    width: 3vw; 
+    height: 3vw; 
+    float: right; 
+    margin-top: 10%;
+    background-size: cover;
+}
+
+#play_white:hover {
+    background-image: url(play_light.png)
+}
+
+#apple_white:hover {
+    background-image: url(apple_light.png)
+}
+
+#play_dark:hover {
+    background-image: url(play_light.png)
+}
+
+#apple_dark:hover {
+    background-image: url(apple_light.png)
+}
