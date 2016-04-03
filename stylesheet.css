@@ -77,44 +77,44 @@
 
 #pokemon:hover + #pokemon-text {
     opacity: 1;
-    -ms-transform: translate(-50%, 150%); /* IE 9 */
-    -webkit-transform: translate(-50%, 150%); /* Chrome, Safari, Opera */
-    transform: translate(-50%, 150%);
+    -ms-transform: translate(-3vw, 5.5vw); /* IE 9 */
+    -webkit-transform: translate(-3vw, 5.5vw); /* Chrome, Safari, Opera */
+    transform: translate(-3vw, 5.5vw);
 }
 
 #steam:hover + #steam-text {
     opacity: 1;
-    -ms-transform: translate(-200%, 0); /* IE 9 */
-    -webkit-transform: translate(-200%, 0); /* Chrome, Safari, Opera */
-    transform: translate(-200%, 0);
+    -ms-transform: translate(-7vw, 0); /* IE 9 */
+    -webkit-transform: translate(-7vw, 0); /* Chrome, Safari, Opera */
+    transform: translate(-7vw, 0);
 }
 
 #league:hover + #league-text {
     opacity: 1;
-    -ms-transform: translate(-60%, -150%); /* IE 9 */
-    -webkit-transform: translate(-60%, -150%); /* Chrome, Safari, Opera */
-    transform: translate(-60%, -150%);
+    -ms-transform: translate(-3vw, -5.5vw); /* IE 9 */
+    -webkit-transform: translate(-3vw, -5.5vw); /* Chrome, Safari, Opera */
+    transform: translate(-3vw, -5.5vw);
 }
 
 #words:hover + #words-text {
     opacity: 1;
-    -ms-transform: translate(50%, -250%); /* IE 9 */
-    -webkit-transform: translate(50%, -250%); /* Chrome, Safari, Opera */
-    transform: translate(50%, -250%);
+    -ms-transform: translate(3vw, -5vw); /* IE 9 */
+    -webkit-transform: translate(3vw, -5vw); /* Chrome, Safari, Opera */
+    transform: translate(3vw, -5vw);
 }
 
 #room:hover + #room-text {
     opacity: 1;
-    -ms-transform: translate(70%, 150%); /* IE 9 */
-    -webkit-transform: translate(70%, 150%); /* Chrome, Safari, Opera */
-    transform: translate(70%, 150%);
+    -ms-transform: translate(3.5vw, 5.5vw); /* IE 9 */
+    -webkit-transform: translate(3.5vw, 5.5vw); /* Chrome, Safari, Opera */
+    transform: translate(3.5vw, 5.5vw);
 }
 
 #desktop:hover + #desktop-text {
     opacity: 1;
-    -ms-transform: translate(150%, 0); /* IE 9 */
-    -webkit-transform: translate(150%, 0); /* Chrome, Safari, Opera */
-    transform: translate(150%, 0);
+    -ms-transform: translate(7vw, 0); /* IE 9 */
+    -webkit-transform: translate(7vw, 0); /* Chrome, Safari, Opera */
+    transform: translate(7vw, 0);
 }
 
 #cv {

@@ -1,17 +1,29 @@
 <html>
     <head>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.2/clipboard.min.js"></script>
         <link rel="stylesheet" type="text/css" href="/stylesheet.css">
-        <script type="text/javascript" src="/tipped.js"></script>
-        <link rel="stylesheet" type="text/css" href="/tipped.css"/>
         <title>Evan Dastin-van Rijn</title>
     </head>
     <body style="margin: 0;">
         <script>
-            new Clipboard('#mail');
-            $(document).ready(function() {
-              Tipped.create('#mail', 'Copied!', { position: 'bottom', showOn: 'click', fontFamily: 'Futura'});
+            $(document).ready(function(){
+              $('a[href^=mailto]').each(function() {
+                var href = $(this).attr('href');
+                $(this).click(function() {
+                  var t;
+                  var self = $(this);
+
+                  $(window).blur(function() {
+                    // The browser apparently responded, so stop the timeout.
+                    clearTimeout(t);
+                  });
+
+                  t = setTimeout(function() {
+                    // The browser did not respond after 500ms, so open an alternative URL.
+                    location.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=theonlydvr@gmail.com';
+                  }, 500);
+                });
+              });
             });
         </script>
         <div style="background-size: cover; height: 75%; width: 100%; position:relative; background:url(http://www.intrawallpaper.com/static/images/recycled_texture_background_by_sandeep_m-d6aeau9_PZ9chud.jpg); text-align:center;">
@@ -52,7 +64,7 @@
         <div style="padding: 3% 20% 3% 20%;">
             <p style="font-family: 'Futura'; font-size: 300%; ">Contact Me</p>
             <div style=" text-align: center;">
-                <div class="contact" id="mail" data-clipboard-text="theonlydvr@gmail.com"></div>
+                <a href="mailto:theonlydvr@gmail.com"><div class="contact" id="mail"></div></a>
                 <a href="https://www.facebook.com/evan.dastinvanrijn"><div style="float: right; margin-right: 30%; margin-top: 30px;" class="contact" id="facebook"></div></a>
                 <a href="https://github.com/theonlydvr"><div style="float: left; margin-left: 30%; margin-top: 30px;" class="contact" id="github"></div></a>
             </div>
