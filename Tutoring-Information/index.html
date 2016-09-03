@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+<title>NHS Tutoring Data</title>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+    // Initialize Firebase
+    // TODO: Replace with your project's customized code snippet
+    var config = {
+      apiKey: "AIzaSyDdXSRHon-GQOlx1YFz5lahrD5RsdsApFo",
+    authDomain: "nhs-tutoring.firebaseapp.com",
+    databaseURL: "https://nhs-tutoring.firebaseio.com",
+    storageBucket: "nhs-tutoring.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body class="background">
+	<script>
+		function classClicked(id) {
+		var bg = $(id).css('background-image');
+		$(id).addClass("selected");
+        bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
+		bg = bg.substring(bg.lastIndexOf("/") + 1);
+		if (bg.includes("deselected")) {
+			bg = bg.replace("deselected", "selected");
+		}
+		else {
+			$(id).removeClass("selected");
+			bg = bg.replace("selected", "deselected");
+		}
+		$(id).css("background-image", "url('subject-icons/" + bg + "')");
+	}
+	function clickPeriod(period) {
+		if (period.hasClass("period-selected")) {
+			period.removeClass("period-selected");
+		}
+		else {
+			period.addClass("period-selected");
+		}
+	}
+	
+	function dayFromIndex(i)
+	{
+		i++;
+		if (i == 7) return "M1";
+		if (i == 14) return "T1";
+		if (i == 21) return "W1";
+		if (i == 28) return "TH1";
+		if (i == 35) return "F1";
+		if (i == 42) return "M2";
+		if (i == 49) return "T2";
+		if (i == 56) return "W2";
+		if (i == 63) return "TH2";
+		if (i == 70) return "F2";
+	}
+	
+	function done() {
+		var classList = [];
+		for (var i = 0; i < $('.selected').length; i++) {
+			var name = $('.selected').eq(i).attr("id").charAt(0).toUpperCase() + $('.selected').eq(i).attr("id").slice(1);
+			classList.push(name);
+		}
+		var uid = firebase.database().ref('Tutors/').push({
+			name: $('#name').val(),
+			email: $('#email').val(),
+			grade: 12,
+			classes: classList.toString()
+		  }).toString();
+		  console.log(uid);
+		  uid = uid.substring(uid.lastIndexOf("/") + 1);
+		for (var i = 0; i < $('.schedule-period').length; i++) {
+			var blocks = [];
+			for (var j = 1; j <= 7; j++) {
+				var period = $('.schedule-period').eq(i);
+				if (period.hasClass("period-selected")) {
+					blocks.push(j);
+				}
+				i++;
+			}
+			i--;
+			console.log(i);
+			var day = dayFromIndex(i);
+			firebase.database().ref('Tutors/' + uid + "/freeBlocks/" + day).set({
+			frees: blocks.toString(),
+			reserved: ""
+		  });
+		}
+		alert("Success!");
+	}
+	</script>
+
+	<div id="logo"></div>
+    <div class="text-container" style="margin-top:10vh">
+    	<h3>Name:</h3>
+        <textarea id="name" placeholder="First Name Last Name"></textarea>
+    </div>
+    <div class="text-container" style="margin-top:10vh">
+    	<h3>Email:</h3>
+        <textarea id="email" placeholder="email@stjohns.be"></textarea>
+    </div>
+    
+    <h3 style="text-align:left; float: none; margin: 5vh 0; margin-left:20%;">Select Classes:</h3>
+    
+    <table cellspacing="0" cellpadding="0" width="60%" style="margin: 0 auto; border:none; margin-top: 10vh" >
+                   <tr>
+                     <td onClick="classClicked('#art')">
+                     	<div id="art" class="class-icon"></div>
+                        <p>Art</p>
+                     </td>
+                     <td onClick="classClicked('#biology')">
+                     	<div id="biology" class="class-icon"></div>
+                        <p>Biology</p>
+                     </td>
+                     <td onClick="classClicked('#business')">
+                     	<div id="business" class="class-icon"></div>
+                        <p>Business</p>
+                     </td>
+                     <td onClick="classClicked('#chemistry')">
+                     	<div id="chemistry" class="class-icon"></div>
+                        <p>Chemistry</p>
+                     </td>
+                     <td onClick="classClicked('#dutch')">
+                     	<div id="dutch" class="class-icon language"></div>
+                        <p>Dutch</p>
+                     </td>
+                     <td onClick="classClicked('#economics')">
+                     	<div id="economics" class="class-icon"></div>
+                        <p>Economics</p>
+                     </td>
+                   </tr>
+					<tr>
+                    	<td onClick="classClicked('#english')">
+                            <div id="english" class="class-icon language"></div>
+                            <p>English</p>
+                         </td>
+                        <td onClick="classClicked('#ess')">
+                            <div id="ess" class="class-icon"></div>
+                            <p>ESS</p>
+                         </td>
+                         <td onClick="classClicked('#french')">
+                            <div id="french" class="class-icon language"></div>
+                            <p>French</p>
+                         </td>
+                         <td onClick="classClicked('#german')">
+                            <div id="german" class="class-icon language"></div>
+                            <p>German</p>
+                         </td>
+                         <td onClick="classClicked('#history')">
+                            <div id="history" class="class-icon language"></div>
+                            <p>History</p>
+                         </td>
+                         <td onClick="classClicked('#maths')">
+                            <div id="maths" class="class-icon language"></div>
+                            <p>Maths</p>
+                         </td>
+                       
+                    </tr>
+                    <tr>
+                    	<td onClick="classClicked('#music')">
+                            <div id="music" class="class-icon language"></div>
+                            <p>Music</p>
+                         </td>
+                    	<td onClick="classClicked('#philosophy')">
+                   	   <div id="philosophy" class="class-icon"></div>
+                        <p>Philosophy</p>
+                     </td>
+                     <td onClick="classClicked('#physics')">
+                   	   <div id="physics" class="class-icon"></div>
+                        <p>Physics</p>
+                     </td>
+                     <td onClick="classClicked('#spanish')">
+                     	<div id="spanish" class="class-icon language"></div>
+                        <p>Spanish</p>
+                     </td>
+                     <td onClick="classClicked('#swedish')">
+                     	<div id="swedish" class="class-icon language"></div>
+                        <p>Swedish</p>
+                     </td>
+                     <td onClick="classClicked('#theater')">
+                     	<div id="theater" class="class-icon" ></div>
+                        <p>Theater</p>
+                     </td>
+                     </tr>
+    </table>
+    
+    <h3 style="text-align:left; float: none; margin: 5vh 0; margin-left:20%;">Select Frees:</h3>
+    <h3 style="text-align:left; float: none; margin: 5vh 0; margin-left:20%;">Week 1:</h3>
+    
+    <table class="week-table">
+                    <tr class="week-header">
+                        <td>Mon.</td>
+                        <td>Tue.</td>
+                        <td>Wed.</td>
+                        <td>Thu.</td>
+                        <td>Fri.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        	<div class="schedule-period" onClick="clickPeriod($(this));">P.1</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.2</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.3</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.4</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.5</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.6</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.7</div>
+                        </td>
+                        <td>
+                        <div class="schedule-period" onClick="clickPeriod($(this));">P.1</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.2</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.3</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.4</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.5</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.6</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.7</div>
+                        </td>
+                        <td>
+                        <div class="schedule-period" onClick="clickPeriod($(this));">P.1</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.2</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.3</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.4</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.5</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.6</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.7</div>
+                        </td>
+                        <td>
+                        <div class="schedule-period" onClick="clickPeriod($(this));">P.1</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.2</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.3</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.4</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.5</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.6</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.7</div>
+                        </td>
+                        <td>
+                        <div class="schedule-period" onClick="clickPeriod($(this));">P.1</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.2</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.3</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.4</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.5</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.6</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.7</div>
+                        </td>
+                    </tr>
+                </table>
+            	<h3 style="text-align:left; float: none; margin: 5vh 0; margin-left:20%;">Week 2:</h3>
+                <table class="week-table">
+                    <tr class="week-header">
+                        <td>Mon.</td>
+                        <td>Tue.</td>
+                        <td>Wed.</td>
+                        <td>Thu.</td>
+                        <td>Fri.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        	<div class="schedule-period" onClick="clickPeriod($(this));">P.1</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.2</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.3</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.4</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.5</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.6</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.7</div>
+                        </td>
+                        <td>
+                        <div class="schedule-period" onClick="clickPeriod($(this));">P.1</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.2</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.3</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.4</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.5</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.6</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.7</div>
+                        </td>
+                        <td>
+                        <div class="schedule-period" onClick="clickPeriod($(this));">P.1</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.2</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.3</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.4</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.5</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.6</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.7</div>
+                        </td>
+                        <td>
+                        <div class="schedule-period" onClick="clickPeriod($(this));">P.1</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.2</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.3</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.4</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.5</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.6</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.7</div>
+                        </td>
+                        <td>
+                        <div class="schedule-period" onClick="clickPeriod($(this));">P.1</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.2</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.3</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.4</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.5</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.6</div>
+                            <div class="schedule-period" onClick="clickPeriod($(this));">P.7</div>
+                        </td>
+                    </tr>
+                </table>
+    			<h1 style="margin: 5vh 0; font-family: Museo Sans;
+	color: #173F35;
+	text-align: center; cursor: pointer;" onclick="done();">Done!</h1>
+</body>
+</html>
