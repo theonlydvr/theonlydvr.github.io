@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="cordova.js"></script>
+<script>
+    // Initialize Firebase
+    // TODO: Replace with your project's customized code snippet
+    var config = {
+      apiKey: "AIzaSyDdXSRHon-GQOlx1YFz5lahrD5RsdsApFo",
+    authDomain: "nhs-tutoring.firebaseapp.com",
+    databaseURL: "https://nhs-tutoring.firebaseio.com",
+    storageBucket: "nhs-tutoring.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<script>
+	function afterschool() {
+		window.location = "afterschool-schedule.html";
+	}
+	function findTutor() {
+		var tutors = firebase.database().ref("Tutors");
+		tutors.on('value', function(snapshot) {
+			var tClass = parent.document.URL.substring(parent.document.URL.indexOf('=') + 1, parent.document.URL.length);
+			snapshot.forEach(function(childSnapshot) {
+				if (childSnapshot.val().classes.includes(tClass) && (localStorage.grade < childSnapshot.val().grade || childSnapshot.val().grade == 12)) {
+					console.log(childSnapshot.val());
+					loadBlocks(childSnapshot.val().freeBlocks);
+				}
+			});
+			for (var i = 0; i < snapshot.length; i++) {
+				loadBlocks(snapshot.val()[i].freeBlocks);
+			}
+		});
+	};
+	function loadBlocks(freeBlocks) {
+			if (freeBlocks.M1 != null) { addBlocks(0, freeBlocks.M1.frees.split(","), freeBlocks.M1.reserved.split(","), true); }
+			if (freeBlocks.T1 != null) { addBlocks(1, freeBlocks.T1.frees.split(","), freeBlocks.T1.reserved.split(","), true); }
+			if (freeBlocks.W1 != null) { addBlocks(2, freeBlocks.W1.frees.split(","), freeBlocks.W1.reserved.split(","), true); }
+			if (freeBlocks.TH1 != null) { addBlocks(3, freeBlocks.TH1.frees.split(","), freeBlocks.TH1.reserved.split(","), true); }
+			if (freeBlocks.F1 != null) { addBlocks(4, freeBlocks.F1.frees.split(","), freeBlocks.F1.reserved.split(","), true); }
+			if (freeBlocks.M2 != null) { addBlocks(0, freeBlocks.M2.frees.split(","), freeBlocks.M2.reserved.split(","), false); }
+			if (freeBlocks.T2 != null) { addBlocks(1, freeBlocks.T2.frees.split(","), freeBlocks.T2.reserved.split(","), false); }
+			if (freeBlocks.W2 != null) { addBlocks(2, freeBlocks.W2.frees.split(","), freeBlocks.W2.reserved.split(","), false); }
+			if (freeBlocks.TH2 != null) { addBlocks(3, freeBlocks.TH2.frees.split(","), freeBlocks.TH2.reserved.split(","), false); }
+			if (freeBlocks.F2 != null) { addBlocks(4, freeBlocks.F2.frees.split(","), freeBlocks.F2.reserved.split(","), false); }
+	};
+	function addBlocks(index, list, reserved, first) {
+		var week = first ? 0 : 1;
+		for (var i = 0; i < list.length; i++){
+					var ref = $("table.week-table:eq(" + week + ") tr:eq(1) td:eq(" + index + ")");
+					if (!ref.html().includes(list[i]) && !reserved.includes(list[i])) ref.html(ref.html() + "<div onclick='blockClicked(" + week + ',' + index + ',' + list[i] + ")' class='schedule-period'>P." + list[i] + "</div>");
+				}
+	}
+	function blockClicked(week, day, period) {
+		var tutors = firebase.database().ref("Tutors");
+		var dayOfWeek;
+		switch (day)
+		{
+			case 0: dayOfWeek = "M"; break;
+			case 1: dayOfWeek = "T"; break;
+			case 2: dayOfWeek = "W"; break;
+			case 3: dayOfWeek = "TH"; break;
+			default: dayOfWeek = "F";
+		}
+		tutors.on('value', function(snapshot) {
+			var tClass = parent.document.URL.substring(parent.document.URL.indexOf('=') + 1, parent.document.URL.length);
+			var tutors = [];
+			snapshot.forEach(function(childSnapshot) {
+				console.log(childSnapshot.key);
+				var tutor = childSnapshot.val();
+				var tempDay = tutor.freeBlocks[dayOfWeek + (week + 1)];
+				if (tutor.classes.includes(tClass) && tempDay.frees.includes(period) && !tempDay.reserved.includes(period))
+					tutors.push(childSnapshot);
+			});
+			var selectedTutor = tutors[0].val();
+			var id = tutors[0].key
+			for (var i = 1; i < tutors.length; i++)
+			{
+				if (tutors[i].val().sessions < selectedTutor.sessions)
+				{
+					selectedTutor = tutors[i].val();
+					id = tutors[i].key;
+				}
+			}
+			
+			window.location = "tutor-details.html?class=" + tClass + "&name=" + selectedTutor.name.substring(0, selectedTutor.name.indexOf(" ")) + "&id=" + id + "&week=" + week + "&day=" + dayOfWeek + "&period=" + period;
+		});
+	}
+	$(document).ready(function() {
+		findTutor();
+	});</script>
+	<div class="background" style="text-align:center">
+    	<div style="height:25%">
+        	<h3 style="margin: 0 auto; width: 80%; position: relative;top: 50%; transform: translateY(-50%);">Pick a day and block that works for you or schedule an afterschool session</h3>
+        </div>
+        <div style="height:25%">
+        	<div style="position: relative;top: 50%; transform: translateY(-50%);">
+            	<p style="text-align:left; margin-left:10%">Week 1:</p>
+                <table class="week-table">
+                    <tr class="week-header">
+                        <td>Mon.</td>
+                        <td>Tue.</td>
+                        <td>Wed.</td>
+                        <td>Thu.</td>
+                        <td>Fri.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div style="height:25%">
+        	<div style="position: relative;top: 50%; transform: translateY(-50%);">
+            	<p style="text-align:left; margin-left:10%">Week 2:</p>
+                <table class="week-table">
+                    <tr class="week-header">
+                        <td>Mon.</td>
+                        <td>Tue.</td>
+                        <td>Wed.</td>
+                        <td>Thu.</td>
+                        <td>Fri.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+        	</div>
+        </div>
+        <div style="height:25%">
+        	<h3 onclick="afterschool()" style="margin: 0; position: relative;top: 50%; transform: translateY(-50%);">Afterschool</h3>
+        </div>
+    </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-1.11.3.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
