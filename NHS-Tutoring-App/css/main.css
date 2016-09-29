@@ -57,6 +57,9 @@ h3 {
 	margin-bottom: 3vh;
 	background-repeat: no-repeat;
 }
+.class-icon:hover {
+	cursor: pointer;
+}
 a {
 	text-decoration: none;
 }
@@ -101,6 +104,9 @@ a h3:hover {
 	color: #173F35;
 	font-family: Museo Sans;
 }
+.schedule-period:hover {
+	cursor: pointer;
+}
 textarea {
 	width: 60%;
 	height: 60%;
@@ -128,6 +134,9 @@ textarea {
 	font-family: Museo Sans;
 	margin: 0 auto;
 	line-height: 15vh;
+}
+.afterschool-day:hover {
+	cursor: pointer;
 }
 #art {
 	background-image: url(../images/subject-icons/art-deselected.png);
