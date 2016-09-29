@@ -31,6 +31,7 @@
 				dayList.push(name);
 			}
 			window.location.href = "mailto:" + 'evdastinvanrijn@stjohns.be' + "?subject=" + 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' + dayList.toString() + ' afterschool' + '&body=' + $('textarea').val();
+			window.history.go(-2);
 		}
 	</script>
 	<div class="background" style="text-align:center">
