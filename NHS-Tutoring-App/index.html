@@ -50,10 +50,10 @@
 			window.location.replace("select-classes.html");
 		}
 	}
-	document.addEventListener("deviceready", function() {
+	$(document).ready(function() {
 			if (localStorage.name != null)
 				window.location.replace("main.html");
-		}, false);
+		});
 </script>
 </body>
 </html>
