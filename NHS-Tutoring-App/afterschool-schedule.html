@@ -30,11 +30,7 @@
 				var name = $('.afterschool-selected').eq(i).attr("id").charAt(0).toUpperCase() + $('.afterschool-selected').eq(i).attr("id").slice(1);
 				dayList.push(name);
 			}
-			cordova.plugins.email.open({
-					to:      "evdastinvanrijn@stjohns.be",
-					subject: 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' dayList.toString() + ' afterschool'
-					body:    $('textarea').val()
-				}, function () { console.log('success'); window.history.back();});
+			window.location.href = "mailto:" + 'evdastinvanrijn@stjohns.be' + "?subject=" + 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' + dayList.toString() + ' afterschool' + '&body=' + $('textarea').val();
 			});
 		}
 	</script>
