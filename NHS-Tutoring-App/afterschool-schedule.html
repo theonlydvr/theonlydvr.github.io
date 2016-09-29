@@ -18,6 +18,10 @@
 </head>
 <body> 
 	<script>
+		function getParameterByName(name) {
+			var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+			return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+		}
 		function dayClick(id) {
 			if (!$(id).hasClass("afterschool-selected"))
 				$(id).addClass("afterschool-selected");
