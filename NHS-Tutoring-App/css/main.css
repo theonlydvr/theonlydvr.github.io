@@ -1,0 +1,203 @@
+@charset "utf-8";
+@font-face {
+	font-family: "Museo Sans";
+	src: url('../fonts/MuseoSans_500.otf');
+}
+#entry-banner {
+	width: 100%;
+	height: 50%;
+	background-color: #173F35;
+}
+
+#stj-banner-logo {
+	background-image: url(../images/stj-logo.png);
+	width: 30vh;
+	height: 30vh;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#banner-name {
+	color: #FFFFFF;
+	text-align: center;
+	font-family: Museo Sans;
+}
+.background {
+	height: 100vh;
+	background-color: #BBD2CC;
+}
+p {
+	font-family: Museo Sans;
+	color: #173F35;
+}
+.background div .input {
+}
+input {
+	font-family: Museo Sans;
+	text-align: left;
+	color: #173F35;
+	padding-left: 1.5vw;
+	border: 1px solid #173F35;
+}
+h3 {
+	color: #173F35;
+	font-family: Museo Sans;
+}
+.class-icon {
+	background-image: url(../images/chem.png);
+	width: 15vh;
+	height: 15vh;
+	background-size: contain;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 3vh;
+	background-repeat: no-repeat;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a h3:hover {
+	color: #92BDAF;
+}
+#welcome {
+	color: #173F35;
+	font-family: Museo Sans;
+}
+.week-table {
+	margin: 0 auto;
+	width: 80%;
+	table-layout: fixed;
+}
+.week-header {
+	background-color: #173F35;
+}
+.week-header td {
+	color: #FFFFFF;
+	font-family: Museo Sans;
+}
+.week-table, .week-table td {
+	border: 1px solid #173F35
+}
+.week-table tr td {
+	padding-top: 0;
+	padding-right: 1vh;
+	padding-left: 1vh;
+	padding-bottom: 1vh;
+	height: 4vh;
+}
+.schedule-period {
+	border-radius: 10px 10px;
+	margin-top: 1vh;
+	margin-right: 0;
+	margin-left: 0;
+	background-color: #92BDAF;
+	color: #173F35;
+	font-family: Museo Sans;
+}
+textarea {
+	width: 60%;
+	height: 60%;
+	resize: none;
+	padding-left: 2vw;
+	border: 1px solid #173F35;
+	font-family: Museo Sans;
+}
+#tutor-profile {
+	width: 25vh;
+	margin: 0 auto;
+	height: 25vh;
+	background-image: url(../images/temp-profile.jpg);
+	background-size: contain;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+}
+.afterschool-day {
+	width: 15vh;
+	border-radius: 50%;
+	height: 15vh;
+	border: 1px solid #173F35;
+	color: #173F35;
+	font-size: 2em;
+	font-family: Museo Sans;
+	margin: 0 auto;
+	line-height: 15vh;
+}
+#art {
+	background-image: url(../images/subject-icons/art-deselected.png);
+}
+#biology   {
+	background-image: url(../images/subject-icons/biology-deselected.png);
+}
+#business {
+	background-image: url(../images/subject-icons/business-deselected.png);
+}
+#economics {
+	background-image: url(../images/subject-icons/economics-deselected.png);
+}
+#ess {
+	background-image: url(../images/subject-icons/ess-deselected.png);
+}
+#history {
+	background-image: url(../images/subject-icons/history-deselected.png);
+}
+.language {
+	background-image: url(../images/subject-icons/language-deselected.png);
+}
+#maths   {
+	background-image: url(../images/subject-icons/maths-deselected.png);
+}
+#music {
+	background-image: url(../images/subject-icons/music-deselected.png);
+}
+#philosophy {
+	background-image: url(../images/subject-icons/philosophy-deselected.png);
+}
+#physics {
+	background-image: url(../images/subject-icons/physics-deselected.png);
+}
+#theater {
+	background-image: url(../images/subject-icons/theater-deselected.png);
+}
+#chemistry {
+	background-image: url(../images/subject-icons/chem-deselected.png);
+}
+.afterschool-selected {
+	background-color: #173F35;
+	color: #BBD2CC;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #BBD2CC;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #BBD2CC;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #BBD2CC;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #BBD2CC;
+}
+
+@media (max-width:480px){
+}
