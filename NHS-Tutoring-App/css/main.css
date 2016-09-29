@@ -199,5 +199,9 @@ textarea {
    color:    #BBD2CC;
 }
 
+.button:hover {
+	color: #92bdaf;
+}
+
 @media (max-width:480px){
 }
