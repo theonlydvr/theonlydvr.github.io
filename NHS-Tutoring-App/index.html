@@ -31,7 +31,7 @@
                 <input id="nameBox" style="margin: 4vh 0; width:60%" type="text" name="name" placeholder="First Last...">
                 <p>Enter your grade:</p>
                 <input id="grade" style="margin: 4vh 0; width:60%" type="text" name="name" placeholder="XX...">
-                <h3 onClick="enteredName()">Continue</h3>
+                <h3 class="button" onClick="enteredName()">Continue</h3>
             </div>
         </div>
     </div>
@@ -50,10 +50,10 @@
 			window.location.replace("select-classes.html");
 		}
 	}
-	$(document).ready(function() {
+	document.addEventListener("deviceready", function() {
 			if (localStorage.name != null)
 				window.location.replace("main.html");
-		});
+		}, false);
 </script>
 </body>
 </html>
