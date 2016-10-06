@@ -44,7 +44,7 @@
 			console.log(getParameterByName("id"));
 			var tutor = firebase.database().ref("Tutors/" + getParameterByName("id"));
 			var updated = false;
-			tutor.on('value', function(snapshot) {
+			tutor.once('value', function(snapshot) {
 				var email = snapshot.val().email;
 				var reserve = firebase.database().ref('Tutors/' + getParameterByName("id") + "/freeBlocks/" + (getParameterByName('day') + (parseInt(getParameterByName('week'), 10) + 1)));
 				console.log(email);
@@ -59,7 +59,7 @@
 				}
 				reserve.push(getParameterByName('period'));
 				window.location.href = "mailto:" + email + "?cc=" + 'evdastinvanrijn@stjohns.be' + "&subject=" + 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' + day + ' ' + week + 'week period ' + getParameterByName('period') + '&body=' + $('textarea').val();
-				reserve.on('value', function(snapshot) {
+				reserve.once('value', function(snapshot) {
 					if (!updated)
 					{
 						updated = true;
