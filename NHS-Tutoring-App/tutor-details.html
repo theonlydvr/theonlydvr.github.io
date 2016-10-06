@@ -46,7 +46,7 @@
 			var updated = false;
 			tutor.on('value', function(snapshot) {
 				var email = snapshot.val().email;
-				var reserve = firebase.database().ref('Tutors/' + getParameterByName("id") + "/freeBlocks/" + (getParameterByName('day') + (getParameterByName('week') + 1)));
+				var reserve = firebase.database().ref('Tutors/' + getParameterByName("id") + "/freeBlocks/" + (getParameterByName('day') + (parseInt(getParameterByName('week'), 10) + 1)));
 				console.log(email);
 				var week = (getParameterByName('week') == 0) ? 'A' : 'B';
 				var day;
@@ -65,7 +65,7 @@
 						updated = true;
 					var temp = snapshot.val().reserved.split();
 					temp.push(getParameterByName('period'));
-					firebase.database().ref('Tutors/' + getParameterByName("id") + "/freeBlocks/" + (getParameterByName('day') + (getParameterByName('week') + 1))).set({
+					firebase.database().ref('Tutors/' + getParameterByName("id") + "/freeBlocks/" + (getParameterByName('day') + (parseInt(getParameterByName('week'), 10) + 1))).set({
 					reserved: temp
 				});
 					}
