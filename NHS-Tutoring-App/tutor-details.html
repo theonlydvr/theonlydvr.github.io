@@ -45,7 +45,7 @@
 			var tutor = firebase.database().ref("Tutors/" + getParameterByName("id"));
 			tutor.on('value', function(snapshot) {
 				var email = snapshot.val().email;
-				var reserve = snapshot.val().freeBlocks[getParameterByName('day') + (getParameterByName('week') + 1)].reserved.split(',');
+				var reserve = firebase.database().ref('Tutors/' + uid + "/freeBlocks/" + (getParameterByName('day') + (getParameterByName('week') + 1)));
 				console.log(email);
 				var week = (getParameterByName('week') == 0) ? 'A' : 'B';
 				var day;
@@ -58,8 +58,12 @@
 				}
 				reserve.push(getParameterByName('period'));
 				window.location.href = "mailto:" + email + "?cc=" + 'evdastinvanrijn@stjohns.be' + "&subject=" + 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' + day + ' ' + week + 'week period ' + getParameterByName('period') + '&body=' + $('textarea').val();
-				firebase.database().ref('Tutors/' + uid + "/freeBlocks/" + (getParameterByName('day') + (getParameterByName('week') + 1))).set({
-					reserved: reserve
+				reserve.on('value', function(snapshot) {
+					var temp = snapshot.val().reserved.split();
+					temp.push(getParameterByName('period'));
+					firebase.database().ref('Tutors/' + uid + "/freeBlocks/" + (getParameterByName('day') + (getParameterByName('week') + 1))).set({
+					reserved: temp
+				});
 				});
 			});
 		}
