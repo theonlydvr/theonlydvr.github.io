@@ -28,13 +28,13 @@
 			else
 				$(id).removeClass("afterschool-selected");
 		}
-		function done() {
+		function done(afterschool) {
 			var dayList = [];
 			for (var i = 0; i < $('.afterschool-selected').length; i++) {
 				var name = $('.afterschool-selected').eq(i).attr("id").charAt(0).toUpperCase() + $('.afterschool-selected').eq(i).attr("id").slice(1);
 				dayList.push(name);
 			}
-			window.location.href = "mailto:" + 'evdastinvanrijn@stjohns.be' + "?subject=" + 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' + dayList.toString() + ' afterschool' + '&body=' + $('textarea').val();
+			window.location.href = "mailto:" + 'evdastinvanrijn@stjohns.be' + "?subject=" + 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' + dayList.toString() + (afterschool ? ' Afterschool' : ' During Lunch') + '&body=' + $('textarea').val();
 			window.history.go(-2);
 		}
 	</script>
@@ -67,7 +67,10 @@
         	<textarea style="position: relative;top: 50%; transform: translateY(-50%);" placeholder="I need help with..."></textarea>
         </div>
       <div style="height:15%">
-      		<h3 class="button" onclick="done();" style="margin: 0; position: relative;top: 50%; transform: translateY(-50%);">Done</h3>
+      		<div style="margin: 0; position: relative;top: 50%; transform: translateY(-50%);">
+            <h3 class="button" onclick="done(true);" style="float:left ;width:50%">Afterschool</h3>
+            <h3 class="button" onclick="done(false);" style="float:right;width:50%">Lunch</h3>
+            </div>
         </div>
     </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
