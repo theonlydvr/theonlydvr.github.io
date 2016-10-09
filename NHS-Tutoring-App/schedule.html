@@ -34,7 +34,8 @@
 <body>
 <script>
 	function afterschool() {
-		window.location = "afterschool-schedule.html";
+		var tClass = parent.document.URL.substring(parent.document.URL.indexOf('=') + 1, parent.document.URL.length);
+		window.location = "afterschool-schedule.html?class=" + tClass;
 	}
 	function findTutor() {
 		var tutors = firebase.database().ref("Tutors");
