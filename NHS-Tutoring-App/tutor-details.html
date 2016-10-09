@@ -70,7 +70,7 @@
 						reserved: String(temp).substring(1)
 					});
 					var updates = {};
-					updates['Tutors/' + getParameterByName("id") + '/sessions'] = Int(snapshot1.val().sessions) + 1;
+					updates['Tutors/' + getParameterByName("id") + '/sessions'] = parseInt(snapshot1.val().sessions) + 1;
 					firebase.database().ref().update(updates);
 					}
 				});
