@@ -66,7 +66,8 @@
 					var temp = snapshot.val().reserved.split();
 					temp.push(getParameterByName('period'));
 					firebase.database().ref('Tutors/' + getParameterByName("id") + "/freeBlocks/" + (getParameterByName('day') + (parseInt(getParameterByName('week'), 10) + 1))).set({
-					reserved: temp
+						frees: snapshot.val().frees,
+						reserved: String(temp)
 				});
 					}
 				});
