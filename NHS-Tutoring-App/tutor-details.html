@@ -41,6 +41,7 @@
 			$("h3").eq(0).html($("h3").eq(0).html().toString().replace("____", getParameterByName("name")));
 		}
 		function send() {
+			var mail = window.open('', '_blank');
 			console.log(getParameterByName("id"));
 			var tutor = firebase.database().ref("Tutors/" + getParameterByName("id"));
 			var updated = false;
@@ -58,7 +59,7 @@
 					default: day = 'Friday';
 				}
 				reserve.push(getParameterByName('period'));
-				window.open("mailto:" + email + "?cc=" + 'evdastinvanrijn@stjohns.be' + "&subject=" + 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' + day + ' ' + week + ' week period ' + getParameterByName('period') + '&body=' + $('textarea').val(), "_blank");
+				mail.location.href = ("mailto:" + email + "?cc=" + 'evdastinvanrijn@stjohns.be' + "&subject=" + 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' + day + ' ' + week + ' week period ' + getParameterByName('period') + '&body=' + $('textarea').val());
 				reserve.once('value', function(snapshot) {
 					if (!updated)
 					{
