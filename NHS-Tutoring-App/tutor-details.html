@@ -73,6 +73,7 @@
 					var updates = {};
 					updates['Tutors/' + getParameterByName("id") + '/sessions'] = parseInt(snapshot1.val().sessions) + 1;
 					firebase.database().ref().update(updates);
+						window.history.go(-2);
 					}
 				});
 			});
