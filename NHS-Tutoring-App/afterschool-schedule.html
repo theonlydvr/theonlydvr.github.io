@@ -29,12 +29,13 @@
 				$(id).removeClass("afterschool-selected");
 		}
 		function done(afterschool) {
+			var mail = window.open('', '_blank');
 			var dayList = [];
 			for (var i = 0; i < $('.afterschool-selected').length; i++) {
 				var name = $('.afterschool-selected').eq(i).attr("id").charAt(0).toUpperCase() + $('.afterschool-selected').eq(i).attr("id").slice(1);
 				dayList.push(name);
 			}
-			window.location.href = "mailto:" + 'evdastinvanrijn@stjohns.be' + "?subject=" + 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' + dayList.toString() + (afterschool ? ' Afterschool' : ' During Lunch') + '&body=' + $('textarea').val();
+			mail.location.href = "mailto:" + 'evdastinvanrijn@stjohns.be' + "?subject=" + 'Tutoring for ' + localStorage.name + ' in ' + getParameterByName('class') + ' on ' + dayList.toString() + (afterschool ? ' Afterschool' : ' During Lunch') + '&body=' + $('textarea').val();
 			window.history.go(-2);
 		}
 	</script>
