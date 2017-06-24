@@ -1,51 +1,17 @@
 <html>
     <head>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.2/clipboard.min.js"></script>
         <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+        <script type="text/javascript" src="/tipped.js"></script>
+        <link rel="stylesheet" type="text/css" href="/tipped.css"/>
         <title>Evan Dastin-van Rijn</title>
-        <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" type="text/css" href="/stylesheet.css">
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
-        <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
-        <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
-        <meta name="application-name" content="&nbsp;"/>
-        <meta name="msapplication-TileColor" content="#FFFFFF" />
-        <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-        <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-        <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-        <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-        <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     </head>
     <body style="margin: 0;">
         <script>
-            $(document).ready(function(){
-              $('a[href^=mailto]').each(function() {
-                var href = $(this).attr('href');
-                $(this).click(function() {
-                  var t;
-                  var self = $(this);
-
-                  $(window).blur(function() {
-                    // The browser apparently responded, so stop the timeout.
-                    clearTimeout(t);
-                  });
-
-                  t = setTimeout(function() {
-                    // The browser did not respond after 500ms, so open an alternative URL.
-                    location.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=theonlydvr@gmail.com';
-                  }, 500);
-                });
-              });
+            new Clipboard('#mail');
+            $(document).ready(function() {
+              Tipped.create('#mail', 'Copied!', { position: 'bottom', showOn: 'click', fontFamily: 'Futura'});
             });
         </script>
         <div style="background-size: cover; height: 75%; width: 100%; position:relative; background:url(http://www.intrawallpaper.com/static/images/recycled_texture_background_by_sandeep_m-d6aeau9_PZ9chud.jpg); text-align:center;">
@@ -55,12 +21,12 @@
         </div>
         <div style="margin: 0 20% 7% 20%">
             <img style="width: 30%; float: right" src="me.jpg"/>
-            <a href="https://docs.google.com/document/d/1FcycfhnKXeVlrOjsquHg-wl70sQZf8prjcYZFm4lw78/export?format=pdf" download><div id="cv"></div></a>
-            <p style="font-size: 2.4vw; font-family: 'Futura';">Who Am I?</p>
-            <p style="font-family: 'Futura'; font-size: 1.3vw; margin: 0 32% 0 0">Hey :) I'm Evan and this is my site. I'm a Dutch-American and have lived in five countries during my lifetime. I'm deeply interested in computers and especially programming having experience in C, Java (Android), Python, JavaScript, and HTML. I've been fascinated by puzzles all my life and, as a result, enjoy origami. I have a passion for philosophy and chemistry and hope to study both in the future.</p>
+            <div id="cv"></div>
+            <p style="font-size: 300%; font-family: 'Futura';">Who Am I?</p>
+            <p style="font-family: 'Futura'; font-size: 150%; margin: 0 32% 0 0">Hey :) I'm Evan and this is my site. I'm a Dutch-American and have lived in five countries during my lifetime. I'm deeply interested in computers and especially programming having experience in C, Java (Android), Python, JavaScript, and HTML. I've been fascinated by puzzles all my life and, as a result, enjoy origami. I have a passion for philosophy and chemistry and hope to study both in the future.</p>
         </div>
         <div style="background: #293061; padding: 3% 20% 5% 20%;">
-            <p style="font-family: 'Futura'; color: #FFF; font-size: 2.4vw; ">Projects and Interests</p>
+            <p style="font-family: 'Futura'; color: #FFF; font-size: 300%; ">Projects and Interests</p>
             <div style="width: 100%; text-align: center; position: relative">
                 <a id="origami" href="https://www.flickr.com/photos/141480455@N05/with/26047917581/"><img class="project" style="width: 30%" src="origami.png"></a>
                 <h1 class="fade-text" id="origami-text" style="font-family: 'Futura'; color: #FFF; position: absolute; margin-left: 15%; top: 0% ">Origami</h1>
@@ -84,15 +50,15 @@
             </div>
         </div>
         <div style="padding: 3% 20% 3% 20%;">
-            <p style="font-family: 'Futura'; font-size: 2.4vw; ">Contact Me</p>
+            <p style="font-family: 'Futura'; font-size: 300%; ">Contact Me</p>
             <div style=" text-align: center;">
-                <a href="mailto:theonlydvr@gmail.com"><div class="contact" id="mail"></div></a>
+                <div class="contact" id="mail" data-clipboard-text="theonlydvr@gmail.com"></div>
                 <a href="https://www.facebook.com/evan.dastinvanrijn"><div style="float: right; margin-right: 30%; margin-top: 30px;" class="contact" id="facebook"></div></a>
                 <a href="https://github.com/theonlydvr"><div style="float: left; margin-left: 30%; margin-top: 30px;" class="contact" id="github"></div></a>
             </div>
             <div style=" text-align: center; margin-top: 20%">
-            <p style="font-family: 'Futura'; font-size: 1.3vw;">Made with <span class="love">♥</span> by Evan Dastin-van Rijn</p>
-            <div style="font-family: 'Futura'; font-size: .7vw;">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a>, and <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <p style="font-family: 'Futura'; font-size: 150%;">Made with <span class="love">♥</span> by Evan Dastin-van Rijn</p>
+            <div style="font-family: 'Futura'; font-size: 80%;">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a>, and <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
         </div>
         </div>
     </body 

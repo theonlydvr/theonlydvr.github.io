@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <title>Evan Dastin-van Rijn</title>
+    </head>
+    
+    <body style="margin: 0;">
+        <img src="math/incircle/incircle.gif" alt="Incircle Animation" style="display: block; margin-left: auto; margin-right: auto;"/>
+        <h1 style="font-family: 'Futura'; text-align: center;">For an isosceles triangle $ABC$ with congruent angles $A$ and $C$,<br/> what is the radius $r$ of the incircle given the magnitude of the angles and the radius $R$ of the circumcircle?</h1>
+        <div style="padding: 2% 10% 2% 10%; background: #293061; overflow: hidden">
+            <img style="background: white; width:35%; float: left" src="math/incircle/equilateral_incircle.png"/>
+            <h3 style="font-family: 'Futura'; color: white; margin-left:40%;">To illustrate the investigation, an equilateral triangle will be constructed according to the parameters.</h3>
+        </div>
+        <div style="padding: 2% 10% 2% 10%;overflow: hidden">
+            <img style="background: white; width:35%; float: right" src="math/incircle/equilateral_incircle_sectors.png"/>
+            <h3 style="font-family: 'Futura'; color: black; ">Since angle $B$ is known, the magnitude of angle $ADC$ is twice that of $B$ as the magnitude of a central angle is double that of an inscribed angle.</h3>
+        </div>
+        <div style="padding: 2% 10% 2% 10%; background: #293061; overflow: hidden">
+            <img style="background: white; width:35%; float: left" src="math/incircle/equilateral_incircle_half.png"/>
+            <h3 style="font-family: 'Futura'; color: white; margin-left:40%;">Hence, the magnitude of angle $ADE$ is half that of angle $ADC$ which is equal to that of angle $B$. Therefore, $AE$ is equal to $Rsin(B)$. As the center of an incircle is the intersection of a triangle's angle bisectors, the magnitude of angle $DAE$ is half that of angle $A$. The value of $r$ can then be found to be equal to $Rsin(B)tan(\frac{a}{2})$.</h3>
+        </div>
+    </body>
+</html>

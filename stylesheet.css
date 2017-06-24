@@ -59,14 +59,13 @@
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
     pointer-events: none;
-    font-size: 1.5vw;
 }
 
 #origami:hover + #origami-text {
     opacity: 1;
-    -ms-transform: translate(0, -1.8em); /* IE 9 */
-    -webkit-transform: translate(0, -1.8em); /* Chrome, Safari, Opera */
-    transform: translate(0, -1.8em);
+    -ms-transform: translate(0, -1.5em); /* IE 9 */
+    -webkit-transform: translate(0, -1.5em); /* Chrome, Safari, Opera */
+    transform: translate(0, -1.5em);
 }
 
 #android:hover + #android-text {
@@ -78,9 +77,9 @@
 
 #pokemon:hover + #pokemon-text {
     opacity: 1;
-    -ms-transform: translate(-2.8vw, 5.3vw); /* IE 9 */
-    -webkit-transform: translate(-2.8vw, 5.3vw); /* Chrome, Safari, Opera */
-    transform: translate(-2.8vw, 5.3vw);
+    -ms-transform: translate(-3vw, 5.5vw); /* IE 9 */
+    -webkit-transform: translate(-3vw, 5.5vw); /* Chrome, Safari, Opera */
+    transform: translate(-3vw, 5.5vw);
 }
 
 #steam:hover + #steam-text {
@@ -99,9 +98,9 @@
 
 #words:hover + #words-text {
     opacity: 1;
-    -ms-transform: translate(2.8vw, -5vw); /* IE 9 */
-    -webkit-transform: translate(2.8vw, -5vw); /* Chrome, Safari, Opera */
-    transform: translate(2.8vw, -5vw);
+    -ms-transform: translate(3vw, -5vw); /* IE 9 */
+    -webkit-transform: translate(3vw, -5vw); /* Chrome, Safari, Opera */
+    transform: translate(3vw, -5vw);
 }
 
 #room:hover + #room-text {
@@ -271,30 +270,4 @@
 
 #apple_dark:hover {
     background-image: url(apple_light.png)
-}
-
-.text_white {
-    font-family: 'Futura'; 
-    color: white; 
-    margin-left: 40%;
-    font-size: 1.7vw;
-}
-
-.text_white_small {
-    font-family: 'Futura'; 
-    color: white; 
-    margin-left: 40%; 
-    font-size: 1.1vw;
-}
-
-.text_black {
-    font-family: 'Futura'; 
-    margin-left: 40%;
-    font-size: 1.7vw;
-}
-
-.text_black_small {
-    font-family: 'Futura'; 
-    margin-left: 40%; 
-    font-size: 1.1vw;
 }
