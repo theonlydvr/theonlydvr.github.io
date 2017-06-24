@@ -77,16 +77,16 @@
 
 #pokemon:hover + #pokemon-text {
     opacity: 1;
-    -ms-transform: translate(-3vw, 5.5vw); /* IE 9 */
-    -webkit-transform: translate(-3vw, 5.5vw); /* Chrome, Safari, Opera */
-    transform: translate(-3vw, 5.5vw);
+    -ms-transform: translate(-3.5vw, 5.5vw); /* IE 9 */
+    -webkit-transform: translate(-3.5vw, 5.5vw); /* Chrome, Safari, Opera */
+    transform: translate(-3.5vw, 5.5vw);
 }
 
 #steam:hover + #steam-text {
     opacity: 1;
-    -ms-transform: translate(-7vw, 0); /* IE 9 */
-    -webkit-transform: translate(-7vw, 0); /* Chrome, Safari, Opera */
-    transform: translate(-7vw, 0);
+    -ms-transform: translate(-5.5vw, 0); /* IE 9 */
+    -webkit-transform: translate(-5.5vw, 0); /* Chrome, Safari, Opera */
+    transform: translate(-5.5vw, 0);
 }
 
 #league:hover + #league-text {
@@ -105,16 +105,16 @@
 
 #room:hover + #room-text {
     opacity: 1;
-    -ms-transform: translate(3.5vw, 5.5vw); /* IE 9 */
-    -webkit-transform: translate(3.5vw, 5.5vw); /* Chrome, Safari, Opera */
-    transform: translate(3.5vw, 5.5vw);
+    -ms-transform: translate(3vw, 5.5vw); /* IE 9 */
+    -webkit-transform: translate(3vw, 5.5vw); /* Chrome, Safari, Opera */
+    transform: translate(3vw, 5.5vw);
 }
 
 #desktop:hover + #desktop-text {
     opacity: 1;
-    -ms-transform: translate(7vw, 0); /* IE 9 */
-    -webkit-transform: translate(7vw, 0); /* Chrome, Safari, Opera */
-    transform: translate(7vw, 0);
+    -ms-transform: translate(5.5vw, 0); /* IE 9 */
+    -webkit-transform: translate(5.5vw, 0); /* Chrome, Safari, Opera */
+    transform: translate(5.5vw, 0);
 }
 
 #cv {
@@ -270,4 +270,53 @@
 
 #apple_dark:hover {
     background-image: url(apple_light.png)
+}
+
+#view_white {
+    background-image: url('view_white.png');
+}
+
+#view_dark {
+    background-image: url('view_dark.png');
+}
+
+#download_white {
+    background-image: url('download_white.png');
+}
+
+#download_dark {
+    background-image: url('download_dark.png');
+}
+
+.view {
+    width: 3vw; 
+    height: 3vw; 
+    float: right; 
+    margin-top: 10%;
+    background-size: cover;
+}
+
+.download {
+    margin-right: 5%; 
+    width: 3vw; 
+    height: 3vw; 
+    float: right; 
+    margin-top: 10%;
+    background-size: cover;
+}
+
+#view_white:hover {
+    background-image: url(view_light.png)
+}
+
+#download_white:hover {
+    background-image: url(download_light.png)
+}
+
+#view_dark:hover {
+    background-image: url(view_light.png)
+}
+
+#download_dark:hover {
+    background-image: url(download_light.png)
 }

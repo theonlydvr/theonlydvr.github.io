@@ -25,8 +25,12 @@
             <h3 style="font-family: 'Futura'; color: white; margin-left:40%;">For the kite method, the largest packed circle would need to touch all four sides of the kite. The circle would be centered at the intersection of the kite's angle bisectors. <br/><br/>Since $NOG$ is a right angle, $FOU$ has a measure of 45° making $FO$ equal to $r$. <br/><br/>Given that the measure of angle $FNU$ is equal to $\frac{180}{n}$, $FN$ is equal to $\frac{r}{tan(\frac{180}{n})}$. <br/><br/>Therefore, $ON = FO + FN = r + \frac{r}{tan(\frac{180}{n})}$. <br/><br/>Since $OG = \frac{s}{2}$, $ON = \frac{s}{2tan(\frac{180}{n})}$. <br/><br/>Hence, $r + \frac{r}{tan(\frac{180}{n})}=\frac{s}{2tan(\frac{180}{n})}$ making $r=\frac{s}{2tan(\frac{180}{n})+2}$.</h3>
         </div>
         <div style="padding: 2% 10% 2% 10%;overflow: hidden">
-            <img style="background: white; width:35%; float: right" src="math/square_tile/tile_gif.gif"/>
-            <h3 style="font-family: 'Futura'; color: black; ">Each of these square units can then be tiled to contain $1 + 2k(k-1)$ square tiles where $k \in \mathbb{Z^+}$ and represents the stage of tiling. Each tile will have a sidelength of $\frac{n}{k\sqrt{2}}$.</h3>
+            <img style="background: white; width:35%; float: right" src="math/n_circles/inscribed.png"/>
+            <h3 style="font-family: 'Futura'; color: black; ">Rather than having a constant side length, the polygons can be inscribed in a circle of constant radius $R$. As the polygon's interior angle is an inscribed angle of the circle, angle $CAB$ is twice its measure. Therefore, the sidelength of the polygon is given by the expression: $2Rsin(\frac{180(n-2)}{n})$. Hence, the expressions for $r$ with each method when inscribed in a circle are respectively $\frac{2Rsin(\frac{180(n-2)}{n}}{2}\cdot tan(\frac{45(n-2)}{n})$ and $\frac{2Rsin(\frac{180(n-2)}{n})}{2tan(\frac{180}{n})+2}$.</h3>
+        </div>
+        <div style="padding: 2% 10% 2% 10%; background: #293061; overflow: hidden">
+            <img style="background: white; width:35%; float: left" src="math/n_circles/kite_method.gif"/>
+            <h3 style="font-family: 'Futura'; color: white; margin-left:40%;">As can be seen from the animations, the kite method (to the left) leads to larger circles as they touch a greater number of sides (4 rather than 3) for an equal area.</h3>
         </div>
     </body>
 </html>
