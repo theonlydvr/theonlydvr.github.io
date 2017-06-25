@@ -9,10 +9,25 @@
     </head>
     <body style="margin: 0;">
         <script>
-            new Clipboard('#mail');
-            $(document).ready(function() {
-              Tipped.create('#mail', 'Copied!', { position: 'bottom', showOn: 'click', fontFamily: 'Futura'});
-            });
+            (function($) {
+              $('a[href^=mailto]').each(function() {
+                var href = $(this).attr('href');
+                $(this).click(function() {
+                  var t;
+                  var self = $(this);
+
+                  $(window).blur(function() {
+                    // The browser apparently responded, so stop the timeout.
+                    clearTimeout(t);
+                  });
+
+                  t = setTimeout(function() {
+                    // The browser did not respond after 500ms, so open an alternative URL.
+                    document.location.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=theonlydvr@gmail.com';
+                  }, 500);
+                });
+              });
+            })(jQuery);
         </script>
         <div style="background-size: cover; height: 75%; width: 100%; position:relative; background:url(http://www.intrawallpaper.com/static/images/recycled_texture_background_by_sandeep_m-d6aeau9_PZ9chud.jpg); text-align:center;">
             <div class="hex" style="margin: 0 auto; top: 30%; transform: translateY(-50%); -ms-transform: translateY(-50%);-moz-transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);webkit-transform: perspective(600px) rotateX(60deg);-moz-transform: perspective(600px) rotateX(60deg);-ms-transform: perspective(600px) rotateX(60deg);-o-transform: perspective(600px) rotateX(60deg);transform: perspective(600px) rotateX(60deg); text-align:center;">
@@ -21,7 +36,7 @@
         </div>
         <div style="margin: 0 20% 7% 20%">
             <img style="width: 30%; float: right" src="me.jpg"/>
-            <div id="cv"></div>
+            <a href="https://docs.google.com/document/d/1FcycfhnKXeVlrOjsquHg-wl70sQZf8prjcYZFm4lw78/export?format=pdf" download><div id="cv"></div></a>
             <p style="font-size: 300%; font-family: 'Futura';">Who Am I?</p>
             <p style="font-family: 'Futura'; font-size: 150%; margin: 0 32% 0 0">Hey :) I'm Evan and this is my site. I'm a Dutch-American and have lived in five countries during my lifetime. I'm deeply interested in computers and especially programming having experience in C, Java (Android), Python, JavaScript, and HTML. I've been fascinated by puzzles all my life and, as a result, enjoy origami. I have a passion for philosophy and chemistry and hope to study both in the future.</p>
         </div>
@@ -47,7 +62,7 @@
         <div style="padding: 3% 20% 3% 20%;">
             <p style="font-family: 'Futura'; font-size: 300%; ">Contact Me</p>
             <div style=" text-align: center;">
-                <div class="contact" id="mail" data-clipboard-text="theonlydvr@gmail.com"></div>
+                <a href="mailto:theonlydvr@gmail.com"><div class="contact" id="mail"></div></a>
                 <a href="https://www.facebook.com/evan.dastinvanrijn"><div style="float: right; margin-right: 30%; margin-top: 30px;" class="contact" id="facebook"></div></a>
                 <a href="https://github.com/theonlydvr"><div style="float: left; margin-left: 30%; margin-top: 30px;" class="contact" id="github"></div></a>
             </div>
