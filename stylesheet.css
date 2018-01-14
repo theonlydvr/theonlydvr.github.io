@@ -26,7 +26,6 @@
     border-left: 208px solid transparent;
     border-right: 208px solid transparent;
     left: 0px;
-    
 }
 
 .project:hover {
@@ -123,11 +122,11 @@
     width: 5vw; 
     height: 5vw;
     margin-right: 8%;
-    background-image: url(cv_selected.png);
+    background-image: url(images/cv_selected.png);
 }
 
 #cv:hover {
-    background-image: url(cv.png);
+    background-image: url(images/cv.png);
 }
 
 @font-face {
@@ -155,15 +154,15 @@
 }
 
 #facebook {
-    background-image: url(facebook.png);
+    background-image: url(images/facebook.png);
 }
 
 #github {
-    background-image: url(github.png);
+    background-image: url(images/github.png);
 }
 
 #mail {
-    background-image: url(mail.png);
+    background-image: url(images/mail.png);
     cursor: pointer;
 }
 
@@ -180,15 +179,15 @@
 }
 
 #facebook:hover {
-    background-image: url(facebook_selected.png);
+    background-image: url(images/facebook_selected.png);
 }
 
 #github:hover {
-    background-image: url(github_selected.png);
+    background-image: url(images/github_selected.png);
 }
 
 #mail:hover {
-    background-image: url(mail_selected.png);
+    background-image: url(images/mail_selected.png);
 }
 
 .contact:hover:after {
@@ -224,19 +223,19 @@
 }
 
 #play_white {
-    background-image: url('play_white.png');
+    background-image: url('images/play_white.png');
 }
 
 #play_dark {
-    background-image: url('play_dark.png');
+    background-image: url('images/play_dark.png');
 }
 
 #apple_white {
-    background-image: url('apple_white.png');
+    background-image: url('images/apple_white.png');
 }
 
 #apple_dark {
-    background-image: url('apple_dark.png');
+    background-image: url('images/apple_dark.png');
 }
 
 .play {
@@ -257,35 +256,43 @@
 }
 
 #play_white:hover {
-    background-image: url(play_light.png)
+    background-image: url(images/play_light.png)
 }
 
 #apple_white:hover {
-    background-image: url(apple_light.png)
+    background-image: url(images/apple_light.png)
 }
 
 #play_dark:hover {
-    background-image: url(play_light.png)
+    background-image: url(images/play_light.png)
 }
 
 #apple_dark:hover {
-    background-image: url(apple_light.png)
+    background-image: url(images/apple_light.png)
 }
 
 #view_white {
-    background-image: url('view_white.png');
+    background-image: url('images/view_white.png');
 }
 
 #view_dark {
-    background-image: url('view_dark.png');
+    background-image: url('images/view_dark.png');
 }
 
 #download_white {
-    background-image: url('download_white.png');
+    background-image: url('images/download_white.png');
 }
 
 #download_dark {
-    background-image: url('download_dark.png');
+    background-image: url('images/download_dark.png');
+}
+
+#repo_white {
+    background-image: url('images/repo_white.png');
+}
+
+#repo_dark {
+    background-image: url('images/repo_dark.png');
 }
 
 .view {
@@ -304,16 +311,32 @@
     background-size: cover;
 }
 
+.repo {
+    width: 3vw; 
+    height: 3vw; 
+    position: absolute;
+    bottom: 6%;
+    background-size: cover;
+}
+
+#repo_white:hover {
+    background-image: url(images/repo_light.png)
+}
+
+#repo_dark:hover {
+    background-image: url(images/repo_light.png)
+}
+
 #view_white:hover {
-    background-image: url(view_light.png)
+    background-image: url(images/view_light.png)
 }
 
 #download_white:hover {
-    background-image: url(download_light.png)
+    background-image: url(images/download_light.png)
 }
 
 #view_dark:hover {
-    background-image: url(view_light.png)
+    background-image: url(images/view_light.png)
 }
 
 #download_dark:hover {
