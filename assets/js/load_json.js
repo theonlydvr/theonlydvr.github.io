@@ -4,7 +4,7 @@ for (let i = 0; i < publications.length; i++) {
   col.append(pubinfo);
   const imgcont = $('<div>', {class: "img-cont"});
   pubinfo.append(imgcont);
-  imgcont.append($('<img>', {class: "img-fluid", src: publications[i].img}));
+  imgcont.append($('<img>', {class: "img-fluid", src: publications[i].img, loading: "lazy"}));
   pubinfo.append('<h3>' + publications[i].title + "</h3>");
   pubinfo.append('<h4>' + publications[i].abstract + "</h4>");
   pubinfo.append('<h5>' + publications[i].authors + "</h5>");
@@ -45,6 +45,6 @@ for (let i = 0; i < portfolio.length; i++) {
   worksingle.append(workinfo);
   workinfo.append('<h3>' + portfolio[i].name + "</h3>");
   workinfo.append('<span>' + portfolio[i].type + "</span>");
-  worksingle.append($('<img>', {class: "img-fluid", src: portfolio[i].thumb}));
+  worksingle.append($('<img>', {class: "img-fluid", src: portfolio[i].thumb, loading: "lazy"}));
   $("#portfolio-grid").append(col);
 }
