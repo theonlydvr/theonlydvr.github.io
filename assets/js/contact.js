@@ -9,7 +9,7 @@ $('#contact-form').on('submit',function(e){
             dataType: "json",
             data: $("#contact-form").serialize(),
             success: function(response) {
-
+                console.log(response)
                 if(response.result == "success") {
                     $('#contact-form')[0].reset();
                     alert('Thank you for contacting me!');

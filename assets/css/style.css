@@ -424,7 +424,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 --------------------------------------------------------------*/
 /* Custom Navmenu */
 .custom-navmenu {
-  background: #0d1e2d;
+  background: rgba(13,30,45, 0.5);
 }
 
 .custom-navmenu .custom-menu, .custom-navmenu .custom-menu li {
@@ -483,6 +483,25 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .custom-navbar .navbar-brand {
   font-size: 1.7rem;
+}
+
+.e {
+  border: 2px solid white;
+  background: #0d1e2d;
+  border-radius:50%;
+  width:100px;
+  height:100px;
+  color:#fff;
+  text-align: center;
+  line-height:100px;
+  vertical-align: middle;
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+}
+
+.nav-menu-box {
+  background: rgba(13,30,45, 0.9);
+  box-shadow: 0px 0px 25px 25px rgba(13,30,45, 1);
 }
 
 /* Burger */
