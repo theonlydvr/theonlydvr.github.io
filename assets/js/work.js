@@ -12,7 +12,7 @@ const right = $("#c-right");
 if (id == portfolio.length-1) {
   right.css("visibility", "hidden");
 } else {
-  right.attr("href","work-single.html?id="+(parseInt(id)+1));
+  right.attr("href","work-single?id="+(parseInt(id)+1));
 }
 
 if (id == 0) {
