@@ -1,4 +1,7 @@
 for (let i = 0; i < publications.length; i++) {
+  if (i==4) {
+    break;
+  }
   const col = $('<div>', {class: publications[i].id + " item col-sm-12 col-md-12 col-lg-6 mb-6"});
   const pubinfo = $('<div>', {class: "pub-info"});
   col.append(pubinfo);
@@ -37,7 +40,25 @@ for (let i = 0; i < publications.length; i++) {
   $("#publications-grid").append(col);
 }
 
+for (let i = 0; i < presentations.length; i++) {
+  if (i==2) {
+    break;
+  }
+  const col = $('<div>', {class: "item col-sm-9 col-md-6 col-lg-6 mb-6"});
+  const worksingle = $('<a>', {href: presentations[i].file, class: "item-wrap fancybox pres-box"});
+  col.append(worksingle);
+  const workinfo = $('<div>', {class: "work-info"});
+  worksingle.append(workinfo);
+  workinfo.append('<h3>' + presentations[i].title + "</h3>");
+  workinfo.append('<span>' + presentations[i].venue + "</span>");
+  worksingle.append($('<img>', {class: "img-fluid", src: presentations[i].img, loading: "lazy"}));
+  $("#presentations-grid").append(col);
+}
+
 for (let i = 0; i < portfolio.length; i++) {
+  if (i==6) {
+    break;
+  }
   const col = $('<div>', {class: portfolio[i].type + " item col-sm-6 col-md-4 col-lg-4 mb-4"});
   const worksingle = $('<a>', {href: "work-single?id="+i, class: "item-wrap fancybox gallery-box"});
   col.append(worksingle);
