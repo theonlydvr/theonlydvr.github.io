@@ -37,8 +37,8 @@ function makeNetwork(xs,ys,pDiv,s,dir,pTerm,N,main,i) {
 }
 
 function createNetwork() {
-  let xs=800;
-  let ys=100;
+  let xs=$(window).width()/2;
+  let ys=($('.custom-navmenu').height()-30)/2;
   let pDiv=0.8;
   let pTerm=0.8;
   let s=20;

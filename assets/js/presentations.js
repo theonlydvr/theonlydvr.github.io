@@ -31,14 +31,14 @@ var presentations = [
     "id": "brain6",
     "img": "assets/img/pres/brain6.jpg",
     "title": "A novel method for DBS artifact removal: Period-based Artifact Reconstruction and Removal Method for DBS",
-    "file": "C:\Users\Evan\Documents\GitHub\theonlydvr.github.io\assets\pdf\BRAIN6.pdf",
+    "file": "assets\pdf\BRAIN6.pdf",
     "venue": "BRAIN Initiative Investigators Meeting"
   },
   {
     "id": "utra",
     "img": "assets/img/pres/utra.jpg",
     "title": "Artifact Removal from Local Field Potential Recordings During Deep Brain Stimulation",
-    "file": "C:\Users\Evan\Documents\GitHub\theonlydvr.github.io\assets\pdf\UTRA.pdf",
+    "file": "assets\pdf\UTRA.pdf",
     "venue": "Undergraduate Teaching and Research Award (UTRA) Symposium"
   }
 ];
