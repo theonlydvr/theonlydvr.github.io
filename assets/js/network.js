@@ -36,16 +36,9 @@ function makeNetwork(xs,ys,pDiv,s,dir,pTerm,N,main,i) {
   }
 }
 
-function createNetwork() {
-  let xs=$(window).width()/2;
-  let ys=($('.custom-navmenu').height()-30)/2;
-  let pDiv=0.8;
-  let pTerm=0.8;
-  let s=20;
+function createNetwork(xs,ys,pDiv,s,dir,pTerm,N) {
   let X=[];
   let Y=[];
-  let dir=80;
-  let N=15;
   let pts = makeNetwork(xs,ys,pDiv,s,dir,pTerm,N,true,1);
   pts = pts.concat(makeNetwork(xs,ys,pDiv,s,-dir,pTerm,N,true,1));
   const delaunay = new Delaunator(pts);
@@ -89,8 +82,19 @@ function setup() {
   canvas.style('left',0)
   canvas.style('z-index',-1)
   canvas.parent("main-navbar")
-  network1 = createNetwork()
-  network2 = createNetwork()
+  initNetwork()
+}
+
+function initNetwork() {
+  let xs=$(window).width()/2;
+  let ys=($('.custom-navmenu').height()-30)/2;
+  let pDiv=0.8;
+  let pTerm=0.8;
+  let s=20;
+  let dir=80;
+  let N=15;
+  network1 = createNetwork(xs,ys,pDiv,s,dir,pTerm,N)
+  network2 = createNetwork(xs,ys,pDiv,s,dir,pTerm,N)
 }
 
 function windowResized() {

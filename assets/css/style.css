@@ -26,6 +26,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: "Raleway", sans-serif;
 }
 
+#work-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .section {
   padding: 7rem 0;
 }
@@ -651,6 +657,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .chevron-cont {
   text-align: center;
+  width: 100%;
+}
+
+.nav-cont {
+  width: 100%;
 }
 
 .chevron {
@@ -659,4 +670,146 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 2%;
+}
+
+.nav-icon {
+  display: inline-block;
+  font-size: 2em;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+/*--------------------------------------------------------------
+# Network
+--------------------------------------------------------------*/
+
+.network-info-cont {
+  width: 20%;
+  margin-left: 2%;
+  margin-top: 2%;
+  background: #0d1e2d;
+  border-radius: 15px;
+  border: 1px solid white;
+  padding: 15px;
+  float: left;
+}
+
+.network-text {
+  color: white;
+  overflow-wrap: break-word;
+  font-size: 10px;
+}
+
+.network-refresh {
+  color: white;
+  float: right;
+  font-size: 2em;
+  margin-top: 2%;
+  margin-right: 2%;
+  transform: scale(1);
+}
+
+.network-refresh:hover {
+  transform: scale(1.2);
+  color: white;
+}
+
+/*--------------------------------------------------------------
+# SnowDLAke
+--------------------------------------------------------------*/
+
+.snowflake-control {
+  width: 20%;
+  background: white;
+  float: right;
+  padding: 15px;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+}
+
+.snowflake-text {
+  color: black;
+  overflow-wrap: break-word;
+  font-size: 10px;
+}
+
+.snowflake-option {
+  font-size: 14px;
+}
+
+#snowflake-seed {
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding:2px;
+  padding-left:5px;
+  padding-right: 5px;
+  margin-top:-5px;
+  float:left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+.snowflake-button {
+  color: black;
+  float: right;
+  font-size: 2em;
+  transform: scale(1);
+  margin-right: 4%;
+}
+
+.snowflake-button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: black;
+}
+
+#enter-seed {
+  transform: scale(1) translateY(-25%);
+}
+
+#enter-seed:hover {
+  transform: scale(1.2) translateY(-25%);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 8px;
+  border-radius: 8px;
+  background: white;
+  border: 2px solid black;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  float:left;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+
+.slider-text {
+  float: right;
+  font-size: 2em;
+  margin-right: 4%;
+  transform: translateY(-25%);
 }

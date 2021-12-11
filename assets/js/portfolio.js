@@ -1,5 +1,137 @@
 var portfolio = [
   {
+    "name": "SnowDLAke",
+    "type": "geometry",
+    "thumb": "assets/img/gallery/thumb/snowflake.jpg",
+    "link": "snowdlake"
+  },
+  {
+    "name": "Network Banner",
+    "type": "geometry",
+    "thumb": "assets/img/gallery/thumb/network.jpg",
+    "link": "network"
+  },
+  {
+    "name": "Echidna",
+    "type": "origami",
+    "thumb": "assets/img/gallery/thumb/echidna.jpg",
+    "content": "assets/img/gallery/echidna.jpg",
+    "desc": "Echidna by Steven Casey. Folded from a square of tant."
+  },
+  {
+    "name": "Large Arms of Shiva Tessellation",
+    "type": "origami",
+    "thumb": "assets/img/gallery/thumb/shiva_large.jpg",
+    "content": "assets/img/gallery/shiva_large.jpg",
+    "desc": "Negative space stars tessellation by Eric Gjerde. Folded from a hexagon of tant."
+  },
+  {
+    "name": "Negative Space Stars Tessellation",
+    "type": "origami",
+    "thumb": "assets/img/gallery/thumb/neg_stars.jpg",
+    "content": "assets/img/gallery/neg_stars.jpg",
+    "desc": "Negative space stars tessellation by Eric Gjerde. Folded from a hexagon of tant."
+  },
+  {
+    "name": "Hydringea Tessellation",
+    "type": "origami",
+    "thumb": "assets/img/gallery/thumb/hydringea.jpg",
+    "content": "assets/img/gallery/hydringea.jpg",
+    "desc": "Hydringea tessellation by Robin Scholz. Folded from a dodecagon of tant."
+  },
+  {
+    "name": "Braided Tessellation 90",
+    "type": "origami",
+    "thumb": "assets/img/gallery/thumb/braided_orange.jpg",
+    "content": "assets/img/gallery/braided_orange.jpg",
+    "desc": "Braided pinwheel tessellation based on a square grid. Folded from a square of 6\" kami."
+  },
+  {
+    "name": "Small Arms of Shiva Tessellation",
+    "type": "origami",
+    "thumb": "assets/img/gallery/thumb/shiva_small.jpg",
+    "content": "assets/img/gallery/shiva_small.jpg",
+    "desc": "Arms of shiva tessellation by Eric Gjerde. Folded from a hexagon of kami."
+  },
+  {
+    "name": "Braided Tessellation 45",
+    "type": "origami",
+    "thumb": "assets/img/gallery/thumb/braided_blue.jpg",
+    "content": "assets/img/gallery/braided_blue.jpg",
+    "desc": "Braided pinwheel tessellation based on a 45° grid. Folded from a square of 6\" kami."
+  },
+  {
+    "name": "Clover Kusadama",
+    "type": "origami",
+    "thumb": "assets/img/gallery/thumb/clover_kusadama.jpg",
+    "content": "assets/img/gallery/clover_kusadama.jpg",
+    "desc": "Designed by Maria Sinayskaya. Folded from 30 sheets of kami."
+  },
+  {
+    "name": "Bullfrog",
+    "type": "origami",
+    "thumb": "assets/img/gallery/thumb/bullfrog.jpg",
+    "content": "assets/img/gallery/bullfrog.jpg",
+    "desc": "Designed by Roman Diaz. Folded from a 12\" square of tant."
+  },
+  {
+    "name": "Rabbit and Carrot",
+    "type": "origami",
+    "thumb": "assets/img/gallery/thumb/rabbit.jpg",
+    "content": "assets/img/gallery/rabbit.jpg",
+    "desc": "Rabbit by Ronald Koh, carrot by Jun Maekawa. Folded from a 12\" square of Kraft paper and 3\" square of duo-color kami respectively."
+  },
+  {
+    "name": "Sequence",
+    "type": "games",
+    "thumb": "assets/img/gallery/thumb/sequence.png",
+    "content": "assets/img/gallery/sequence.png",
+    "desc": "A simple game where you combine numbers in a grid based on addition. Get the highest score in a timed or unlimited format.",
+    "play": "Sequence/"
+  },
+  {
+    "name": "Poland A Guide to Major Cities",
+    "type": "apps",
+    "thumb": "assets/img/gallery/thumb/poland_icon.png",
+    "content": "assets/img/gallery/poland_icon.png",
+    "desc": "A complete guide to major Polish cities - (i.e. Krakow, Warsaw, Lublin, Lodz) and a helpful resource for anyone traveling to Poland. I developed the Android version of the application.",
+    "play_store": "https://play.google.com/store/apps/details?id=net.multieducator.poland&hl=en&gl=US",
+    "app_store": "https://apps.apple.com/us/app/poland-a-guide-to-major-cities-and-jewish-sites/id901499355"
+  },
+  {
+    "name": "	JiTT Infographics",
+    "type": "apps",
+    "thumb": "assets/img/gallery/thumb/jitt_icon.png",
+    "content": "assets/img/gallery/jitt_icon.png",
+    "desc": "Just in Time Teaching (JiTT) is a series of evidence-based infographics that address foundational clinical teaching principles. I developed the Android version of the application.",
+    "play_store": "https://play.google.com/store/apps/details?id=com.multieducator.jitt&hl=en&gl=US",
+    "app_store": "https://apps.apple.com/us/app/jitt-infographics/id1536470883"
+  },
+  {
+    "name": "Manatea Time",
+    "type": "lasercutting",
+    "thumb": "assets/img/gallery/thumb/tea_coaster.jpg",
+    "content": "assets/img/gallery/tea_coaster.jpg",
+    "desc": "One of three lasercut coasters from a series based on animal puns.",
+    "download": "assets/svg/tea_coaster.svg"
+  },
+  {
+    "name": "Seal of Approval",
+    "type": "lasercutting",
+    "thumb": "assets/img/gallery/thumb/seal_coaster.jpg",
+    "content": "assets/img/gallery/seal_coaster.jpg",
+    "desc": "One of three lasercut coasters from a series based on animal puns.",
+    "download": "assets/svg/seal_coaster.svg"
+  },
+  {
+    "name": "Beer?",
+    "type": "lasercutting",
+    "thumb": "assets/img/gallery/thumb/beer_coaster.jpg",
+    "content": "assets/img/gallery/beer_coaster.jpg",
+    "desc": "One of three lasercut coasters from a series based on animal puns.",
+    "download": "assets/svg/beer_coaster.svg"
+  },
+  {
     "name": "Split Golden Triangle",
     "type": "geometry",
     "thumb": "assets/img/gallery/thumb/8_golden_triangle.jpg",

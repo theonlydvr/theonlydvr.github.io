@@ -1,5 +1,15 @@
 var publications = [
   {
+    "id": "platform",
+    "img": "assets/img/pubs/platform.jpg",
+    "title": "Long-term ecological assessment of intracranial electrophysiology synchronized to behavioral markers in obsessive-compulsive disorder",
+    "abstract": "Detection of neural signatures related to pathological behavioral states could enable adaptive deep brain stimulation (DBS) ...",
+    "authors": "Nicole R. Provenza, Sameer A. Sheth, <b>Evan M. Dastin-van Rijn</b>, Raissa K. Mathura, Yaohan Ding, Gregory S. Vogt, Michelle Avendano-Ortega, Nithya Ramakrishnan, Noam Peled, Luiz Fernando Fracassi Gelin, David Xing, Laszlo A. Jeni, Itir Onal Ertugrul, Adriel Barrios-Anderson, Evan Matteson, Andrew D. Wiese, Junqian Xu, Ashwin Viswanathan, Matthew T. Harrison, Kelly R. Bijanki, Eric A. Storch, Jeffrey F. Cohn, Wayne K. Goodman & David A. Borton",
+    "pdf": "assets/pdf/platform.pdf",
+    "citation": "assets/bib/platform.bib",
+    "doi": "https://doi.org/10.1038/s41591-021-01550-z"
+  },
+  {
     "id": "loss-averaged",
     "img": "assets/img/pubs/loss-averaged.png",
     "title": "How do packet losses affect measures of averaged neural signals?",

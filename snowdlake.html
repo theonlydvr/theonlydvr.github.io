@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>evandvr</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" type="image/png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyPortfolio - v4.3.0
+  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body id="snowflake-container" style="background: #0d1e2d">
+
+  <div class="snowflake-control">
+    <div>
+      <a onclick='newSeed();reset();return false;' class="snowflake-button"><i class="fas fa-sync-alt"></i></a>
+      <a onclick='updateFromSliders();reset();return false;' class="snowflake-button"><i class="far fa-snowflake"></i></a>
+      <h1 class="snowflake-text" style="font-size: 22px">SnowDLAke</h1>
+    </div>
+    <p class="snowflake-text" >This is a snowflake simulator inspired by a <a href="https://codegolf.stackexchange.com/questions/42506/draw-a-snowflake">Code Golf</a> post based on diffusion limited aggregation (DLA). You can choose the symmetry (3-12 points), number of particles used to generate each section of the flake, how emphasized the diagonals are, the size of the flake, how large the points in the flake are, and the flake colors. Parameters are summarized in the seed which you can enter to recreate a particular flake (press the arrow to enter a seed). The snowflake button will draw your flake with the current parameters and random seed. The reset button will draw a flake from a new random seed while keeping the current parameters. Enjoy the snow!</p>
+    <p class="snowflake-text snowflake-option">Seed:</p>
+    <p id="snowflake-seed" contenteditable="true"></p>
+    <a onclick="updateFromSeed($('#snowflake-seed').text());reset();return false;" id="enter-seed" class="snowflake-button"><i class="fas fa-arrow-right"></i></a>
+    <br/><br/>
+    <p class="snowflake-text snowflake-option">Symmetry:</p>
+    <div class="slidecontainer">
+      <input type="range" min="3" max="12" value="6" class="slider" name="symSlider" id="symSlider" data-show-value="true" oninput="updateSliders();">
+      <output class="snowflake-text slider-text" for="symSlider" id="symVal">6</output>
+    </div>
+    <br/><br/>
+    <p class="snowflake-text snowflake-option">Particle Number:</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="5000" value="500" class="slider" name="particleSlider" id="particleSlider" data-show-value="true" oninput="updateSliders();">
+      <output class="snowflake-text slider-text" for="particleSlider" id="particleVal">500</output>
+    </div>
+    <br/><br/>
+    <p class="snowflake-text snowflake-option">Diagonal Bias:</p>
+    <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="17" class="slider" name="diagSlider" id="diagSlider" data-show-value="true" oninput="updateSliders();">
+      <output class="snowflake-text slider-text" for="diagSlider" id="diagVal">17</output>
+    </div>
+    <br/><br/>
+    <p class="snowflake-text snowflake-option">Size:</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="10" value="2" class="slider" name="sizeSlider" id="sizeSlider" data-show-value="true" oninput="updateSliders();">
+      <output class="snowflake-text slider-text" for="sizeSlider" id="sizeVal">2</output>
+    </div>
+    <br/><br/>
+    <p class="snowflake-text snowflake-option">Point Size:</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="50" value="12" class="slider" name="scaleSlider" id="scaleSlider" data-show-value="true" oninput="updateSliders();">
+      <output class="snowflake-text slider-text" for="scaleSlider" id="scaleVal">12</output>
+    </div>
+    <br/><br/>
+    <table style="width: 95%">
+      <tr>
+        <td>
+          <p class="snowflake-text snowflake-option" style="float: left">Point Color:</p>
+          <input id="pointSelector" type="color" style="margin-top: 10px; margin-left: 3px;"/>
+        </td>
+        <td>
+          <p class="snowflake-text snowflake-option" style="float: left">Background Color:</p>
+          <input id="backgroundSelector" type="color" style="margin-top: 10px; margin-left: 3px;"/>
+        </td>
+      </tr>
+    </table>
+    <p class="snowflake-text snowflake-option">Point Opacity:</p>
+    <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="100" class="slider" name="alphaSlider" id="alphaSlider" data-show-value="true" oninput="updateSliders();">
+      <output class="snowflake-text slider-text" for="alphaSlider" id="alphaVal">100</output>
+    </div>
+  </div>
+
+  <!-- Template Main JS File -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/eee941b5a9.js" crossorigin="anonymous"></script>
+  <script src="assets/vendor/p5.min.js"></script>
+  <script src="assets/js/snowflake.js"></script>
+
+</body>
+
+</html>

@@ -46,7 +46,7 @@
             <li><a href="about">About Me</a></li>
             <li><a href="publications">Publications</a></li>
             <li><a href="presentations">Posters/Presentations</a></li>
-            <li class="active"><a href="works">Portfolio</a></li>
+            <li class="active"><a href="works">Odds & Ends</a></li>
             <li><a href="contact">Contact</a></li>
           </ul>
         </div>
@@ -76,7 +76,7 @@
       <div class="container">
         <div class="row mb-3 align-items-center">
           <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
-            <h2>Portfolio</h2>
+            <h2>Odds & Ends</h2>
           </div>
           <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
             <div id="filters" class="filters">
@@ -85,7 +85,7 @@
               <a href="#" data-filter=".games">Games</a>
               <a href="#" data-filter=".cross">Cross-stitch</a>
               <a href="#" data-filter=".geometry">Geometry</a>
-              <a href="#" data-filter=".lasercut">Lasercutting</a>
+              <a href="#" data-filter=".lasercutting">Lasercutting</a>
               <a href="#" data-filter=".origami">Origami</a>
               <a href="#" data-filter=".research">Research</a>
             </div>
@@ -145,7 +145,13 @@
   <script>
     for (let i = 0; i < portfolio.length; i++) {
       const col = $('<div>', {class: portfolio[i].type + " item col-sm-6 col-md-4 col-lg-4 mb-4"});
-      const worksingle = $('<a>', {href: "work-single?id="+i, class: "item-wrap fancybox gallery-box"});
+      let worksingle;
+      if (portfolio[i].hasOwnProperty("link")) {
+        worksingle = $('<a>', {href: portfolio[i].link, class: "item-wrap fancybox gallery-box"});
+      }
+      else {
+        worksingle = $('<a>', {href: "work-single?id="+(portfolio.length-i-1), class: "item-wrap fancybox gallery-box"});
+      }
       col.append(worksingle);
       const workinfo = $('<div>', {class: "work-info"});
       worksingle.append(workinfo);
