@@ -60,7 +60,12 @@ for (let i = 0; i < portfolio.length; i++) {
     break;
   }
   const col = $('<div>', {class: portfolio[i].type + " item col-sm-6 col-md-4 col-lg-4 mb-4"});
-  const worksingle = $('<a>', {href: "work-single?id="+i, class: "item-wrap fancybox gallery-box"});
+  if (portfolio[i].hasOwnProperty("link")) {
+    worksingle = $('<a>', {href: portfolio[i].link, class: "item-wrap fancybox gallery-box"});
+  }
+  else {
+    worksingle = $('<a>', {href: "work-single?id="+(portfolio.length-i-1), class: "item-wrap fancybox gallery-box"});
+  }
   col.append(worksingle);
   const workinfo = $('<div>', {class: "work-info"});
   worksingle.append(workinfo);
