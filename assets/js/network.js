@@ -75,7 +75,8 @@ function createNetwork(xs,ys,pDiv,s,dir,pTerm,N) {
 }
 
 function setup() {
-  let canvas = createCanvas($(window).width(), $('.custom-navmenu').height()-30);
+  console.log($('.custom-navmenu').height())
+  let canvas = createCanvas($(window).width(), $('.custom-navmenu').height()-90);
   canvas.style('display', 'block');
   canvas.style('position', 'absolute');
   canvas.style('top',0)
@@ -87,7 +88,7 @@ function setup() {
 
 function initNetwork() {
   let xs=$(window).width()/2;
-  let ys=($('.custom-navmenu').height()-30)/2;
+  let ys=($('.custom-navmenu').height()-90)/2;
   let pDiv=0.8;
   let pTerm=0.8;
   let s=20;

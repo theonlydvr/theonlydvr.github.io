@@ -14,10 +14,10 @@ var publications = [
     "img": "assets/img/pubs/loss-averaged.png",
     "title": "How do packet losses affect measures of averaged neural signals?",
     "abstract": "Recent advances in implanted device development have enabled chronic streaming of neural data to external devices ...",
-    "authors": "<b>Evan Dastin-van Rijn</b>, Matthew Harrison, David A. Borton",
+    "authors": "<b>Evan M. Dastin-van Rijn</b>, Nicole R. Provenza, Matthew T. Harrison, David A. Borton",
     "pdf": "assets/pdf/loss-averaged.pdf",
     "citation": "assets/bib/loss-averaged.bib",
-    "biorxiv": "https://www.biorxiv.org/content/10.1101/2021.06.03.446830v1.abstract",
+    "doi": "https://doi.org/10.1109/EMBC46164.2021.9629666",
   },
   {
     "id": "honeycomb",
