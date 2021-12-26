@@ -1,5 +1,15 @@
 var publications = [
   {
+    "id": "ipain",
+    "img": "assets/img/pubs/ipain.jpg",
+    "title": "Personalizing Dual-Target Cortical Stimulation with Bayesian Parameter Optimization Successfully Treats Central Post-Stroke Pain: A Case Report",
+    "abstract": "Central pain disorders, such as central post-stroke pain, remain clinically challenging to treat ...",
+    "authors": "<b>Evan M. Dastin-van Rijn</b>, Seth D. König, Danielle Carlson, Vasudha Goel, Andrew Grande, Donald R. Nixdorf, Sarah Benish, Alik S. Widge, Ziad Nahas, Michael C. Park, Tay I. Netoff, Alexander B. Herman<sup>†</sup>, and David P. Darrow<sup>†</sup>",
+    "pdf": "assets/pdf/ipain.pdf",
+    "citation": "assets/bib/ipain.bib",
+    "doi": "https://doi.org/10.3390/brainsci12010025"
+  },
+  {
     "id": "platform",
     "img": "assets/img/pubs/platform.jpg",
     "title": "Long-term ecological assessment of intracranial electrophysiology synchronized to behavioral markers in obsessive-compulsive disorder",
