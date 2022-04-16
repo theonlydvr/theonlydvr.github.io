@@ -1,5 +1,12 @@
 var presentations = [
   {
+    "id": "sobp-neuromod-2022.pdf",
+    "img": "assets/img/pres/sobp-neuromod-2022.jpg",
+    "title": "Rodents Solve an Extradimensional Set-Shifting Task by Forgetful, Adaptive Reinforcement Learning",
+    "file": "assets/pdf/sobp-neuromod-2022.pdf",
+    "venue": "Minnesota Neuromodulation Symposium 2022"
+  },
+  {
     "id": "embc2021",
     "img": "assets/img/pres/embc21.jpg",
     "title": "How do packet losses affect measures of averaged neural signals?",
