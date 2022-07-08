@@ -2,13 +2,12 @@ var publications = [
   {
     "id": "pelp",
     "img": "assets/img/pubs/pelp.jpg",
-    "title": "PELP: accounting for missing data in neural time series by Periodic Estimation of Lost Packets",
+    "title": "PELP: Accounting for Missing Data in Neural Time Series by Periodic Estimation of Lost Packets",
     "abstract": "Implanted electrical stimulators with sensing capabilities have enabled the development of closed-loop neuromodulation ...",
-    "authors": "<b>Evan Dastin-van Rijn</b>, Nicole R Provenza, Wayne Goodman, Matthew Harrison, and David Allenson Borton",
+    "authors": "<b>Evan Dastin-van Rijn</b>, Nicole R Provenza, Gregory S. Vogt, Michelle Avendano-Ortega, Sameer A. Sheth, Wayne Goodman, Matthew Harrison, and David Allenson Borton",
     "pdf": "assets/pdf/pelp.pdf",
     "citation": "assets/bib/pelp.bib",
-    "biorxiv": "https://www.biorxiv.org/content/10.1101/2022.02.04.479162v1",
-    "doi": "https://doi.org/10.1101/2022.02.04.479162"
+    "doi": "https://doi.org/10.3389/fnhum.2022.934063"
   },
   {
     "id": "ipain",
