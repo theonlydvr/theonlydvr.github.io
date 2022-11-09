@@ -1,5 +1,11 @@
 var portfolio = [
   {
+    "name": "Monstera",
+    "type": "other",
+    "thumb": "assets/img/gallery/thumb/monstera.jpg",
+    "link": "monstera"
+  },
+  {
     "name": "SnowDLAke",
     "type": "geometry",
     "thumb": "assets/img/gallery/thumb/snowflake.jpg",

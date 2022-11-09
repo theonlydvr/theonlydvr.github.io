@@ -1,5 +1,25 @@
 var publications = [
   {
+    "id": "US20220338786A1",
+    "img": "assets/img/pubs/US20220338786A1.jpg",
+    "title": "Patent Application: Period-Based Artifact Reconstruction and Removal Method for Deep Brain Stimulation",
+    "abstract": "Methods and systems for improved removal of deep brain stimulation artifacts from electrical measurements of brain activity...",
+    "authors": "David A. Borton, <b>Evan M. Dastin-van Rijn</b>, Matthew T. Harrison, Nicole R. Provenza, Paula Chen, Taewoo Kim, Jérôme Darbon",
+    "pdf": "assets/pdf/US20220338786A1.pdf",
+    "citation": "assets/bib/US20220338786A1.bib",
+  },
+  {
+    "id": "missing-periodic",
+    "img": "assets/img/pubs/missing-periodic.gif",
+    "title": "Periodic Artifact Removal With Applications to Deep Brain Stimulation",
+    "abstract": "Deep brain stimulation (DBS) therapies have shown clinical success in the treatment of a number of neurological illnesses...",
+    "authors": "Paula Chen, Taewoo Kim, <b>Evan Dastin-van Rijn</b>, Nicole R. Provenza, Sameer A. Sheth, Wayne K. Goodman, David A. Borton, Matthew T. Harrison, Jérôme Darbon",
+    "pdf": "assets/pdf/missing-periodic.pdf",
+    "citation": "assets/bib/missing-periodic.bib",
+    "code": "https://github.com/pxchen95/artifact_removal",
+    "doi": "https://doi.org/10.1109/tnsre.2022.3205453"
+  },
+  {
     "id": "pelp",
     "img": "assets/img/pubs/pelp.jpg",
     "title": "PELP: Accounting for Missing Data in Neural Time Series by Periodic Estimation of Lost Packets",
