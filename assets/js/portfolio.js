@@ -3,6 +3,7 @@ var portfolio = [
     "name": "Monstera",
     "type": "other",
     "thumb": "assets/img/gallery/thumb/monstera.jpg",
+    "content": "assets/img/gallery/monstera.jpg",
     "desc": "Lego \"painting\" based off a photograph of monstera leaves."
   },
   {
