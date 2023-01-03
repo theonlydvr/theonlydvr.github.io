@@ -157,7 +157,11 @@
       worksingle.append(workinfo);
       workinfo.append('<h3>' + portfolio[i].name + "</h3>");
       workinfo.append('<span>' + portfolio[i].type + "</span>");
-      worksingle.append($('<img>', {class: "img-fluid", src: portfolio[i].thumb, loading: "lazy"}));
+      let image = $('<img>', {class: "img-fluid", src: portfolio[i].thumb, loading: "lazy"})
+      if (portfolio[i].hasOwnProperty("cover") && portfolio[i].cover) {
+        image.css({'object-fit': 'contain'})
+      }
+      worksingle.append(image);
       $("#portfolio-grid").append(col);
     }
   </script>

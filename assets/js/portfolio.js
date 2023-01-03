@@ -1,5 +1,25 @@
 var portfolio = [
   {
+    "name": "Project Euler",
+    "type": "other",
+    "thumb": "https://projecteuler.net/profile/theonlydvr.png",
+    "link": "https://projecteuler.net/",
+    "cover": true
+  },
+  {
+    "name": "Stellar Rodents",
+    "type": "other",
+    "thumb": "assets/img/gallery/thumb/rats.jpg",
+    "content": "assets/img/gallery/rats.jpg",
+    "desc": "Lego \"painting\" made for a friend to honor her rats Castor, Pollux, and Orpheus."
+  },
+  {
+    "name": "Advent of Code 2022",
+    "type": "other",
+    "thumb": "assets/img/gallery/thumb/aoc_2022.jpg",
+    "link": "https://github.com/theonlydvr/AoC2022"
+  },
+  {
     "name": "Monstera",
     "type": "other",
     "thumb": "assets/img/gallery/thumb/monstera.jpg",
