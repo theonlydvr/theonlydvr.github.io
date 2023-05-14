@@ -1,11 +1,19 @@
 var presentations = [
   {
+    "id": "sobp-neuromod-2023",
+    "img": "assets/img/pres/sobp-neuromod-2023.png",
+    "title": "Electrical stimulation of mid-striatum enhances cognitive control",
+    "file": "assets/pdf/sfn-2022.pdf",
+    "venue": "Society of Biological Psychiatry"
+  },
+  {
     "id": "sfn-2022",
     "img": "assets/img/pres/sfn-2022.jpg",
     "title": "Rodents Solve an Extradimensional Set-Shifting Task by Forgetful, Adaptive Reinforcement Learning",
     "file": "assets/pdf/sfn-2022.pdf",
     "venue": "Society for Neuroscience"
-  },{
+  },
+  {
     "id": "sobp-neuromod-2022",
     "img": "assets/img/pres/sobp-neuromod-2022.jpg",
     "title": "Rodents Solve an Extradimensional Set-Shifting Task by Forgetful, Adaptive Reinforcement Learning",

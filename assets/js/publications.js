@@ -1,5 +1,16 @@
 var publications = [
   {
+    "id": "oscar",
+    "img": "assets/img/pubs/oscar.jpg",
+    "title": "OSCAR: an open-source controller for animal research",
+    "abstract": "Operant animal behavior training and monitoring is fundamental to scientific inquiry across fields necessitating evaluation via controlled laboratory tasks...",
+    "authors": "<b>Evan M. Dastin-van Rijn</b>, Elizabeth Sachse, Francesca Iacobucci, Megan Mensinger, Alik S. Widge",
+    "pdf": "assets/pdf/oscar.pdf",
+    "citation": "assets/bib/oscar.bib",
+    "code": "https://github.com/tne-lab/OSCAR",
+    "doi": "https://doi.org/10.1101/2023.02.03.527033"
+  },
+  {
     "id": "US20220338786A1",
     "img": "assets/img/pubs/US20220338786A1.jpg",
     "title": "Patent Application: Period-Based Artifact Reconstruction and Removal Method for Deep Brain Stimulation",
