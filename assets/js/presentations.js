@@ -3,7 +3,7 @@ var presentations = [
     "id": "sobp-neuromod-2023",
     "img": "assets/img/pres/sobp-neuromod-2023.png",
     "title": "Electrical stimulation of mid-striatum enhances cognitive control",
-    "file": "assets/pdf/sfn-2022.pdf",
+    "file": "assets/pdf/sobp-neuromod-2023.pdf",
     "venue": "Society of Biological Psychiatry"
   },
   {
