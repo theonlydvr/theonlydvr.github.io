@@ -1,5 +1,11 @@
 var portfolio = [
   {
+    "name": "TNELab Website",
+    "type": "other",
+    "thumb": "assets/img/gallery/thumb/tnelab.jpg",
+    "link": "https://tnelab.org"
+  },
+  {
     "name": "Project Euler",
     "type": "other",
     "thumb": "https://projecteuler.net/profile/theonlydvr.png",

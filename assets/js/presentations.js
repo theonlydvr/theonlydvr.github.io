@@ -1,5 +1,12 @@
 var presentations = [
   {
+    "id": "sfn-2023",
+    "img": "assets/img/pres/sfn_2023.png",
+    "title": "Black-box optimization of cognitive control with electrical stimulation",
+    "file": "assets/pdf/sfn_2023.pdf",
+    "venue": "Society for Neuroscience"
+  },
+  {
     "id": "sobp-neuromod-2023",
     "img": "assets/img/pres/sobp-neuromod-2023.png",
     "title": "Electrical stimulation of mid-striatum enhances cognitive control",
