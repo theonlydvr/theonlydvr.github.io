@@ -1,5 +1,11 @@
 var portfolio = [
   {
+    "name": "Advent of Code 2023",
+    "type": "other",
+    "thumb": "assets/img/gallery/thumb/aoc_2023.jpg",
+    "link": "https://github.com/theonlydvr/AoC2023"
+  },
+  {
     "name": "TNELab Website",
     "type": "other",
     "thumb": "assets/img/gallery/thumb/tnelab.jpg",
