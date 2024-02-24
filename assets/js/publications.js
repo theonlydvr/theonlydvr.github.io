@@ -1,5 +1,15 @@
 var publications = [
   {
+    "id": "setshift",
+    "img": "assets/img/pubs/setshift.jpg",
+    "title": "Cross-species modeling and enhancement of cognitive control with striatal brain stimulation",
+    "abstract": "Brain disorders, particularly mental disorders, might be effectively treated by direct electrical brain stimulation, but clinical progress requires understanding of therapeutic mechanisms.",
+    "authors": "Adriano E. Reimer<sup>†</sup>, <b>Evan M. Dastin-van Rijn</b><sup>†</sup>, Jaejoong Kim, Megan E Mensinger, Elizabeth M Sachse, Aaron Wald, Eric Hoskins, Kartikeya Singh, Abigail Alpers, Dawson Cooper, Meng-Chen Lo, Amanda R de Oliveira, Gregory Simandl, Nathanial Stephenson, Alik S. Widge",
+    "pdf": "assets/pdf/setshift.pdf",
+    "citation": "assets/bib/setshift.bib",
+    "biorxiv": "https://doi.org/10.1101/2024.02.16.580680"
+  },
+  {
     "id": "oscar",
     "img": "assets/img/pubs/oscar.jpg",
     "title": "OSCAR: an open-source controller for animal research",
@@ -8,7 +18,7 @@ var publications = [
     "pdf": "assets/pdf/oscar.pdf",
     "citation": "assets/bib/oscar.bib",
     "code": "https://github.com/tne-lab/OSCAR",
-    "doi": "https://doi.org/10.1101/2023.02.03.527033"
+    "biorxiv": "https://doi.org/10.1101/2023.02.03.527033"
   },
   {
     "id": "US20220338786A1",
