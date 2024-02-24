@@ -1,7 +1,7 @@
 var publications = [
   {
     "id": "setshift",
-    "img": "assets/img/pubs/setshift.jpg",
+    "img": "assets/img/pubs/setshift.png",
     "title": "Cross-species modeling and enhancement of cognitive control with striatal brain stimulation",
     "abstract": "Brain disorders, particularly mental disorders, might be effectively treated by direct electrical brain stimulation, but clinical progress requires understanding of therapeutic mechanisms.",
     "authors": "Adriano E. Reimer<sup>†</sup>, <b>Evan M. Dastin-van Rijn</b><sup>†</sup>, Jaejoong Kim, Megan E Mensinger, Elizabeth M Sachse, Aaron Wald, Eric Hoskins, Kartikeya Singh, Abigail Alpers, Dawson Cooper, Meng-Chen Lo, Amanda R de Oliveira, Gregory Simandl, Nathanial Stephenson, Alik S. Widge",
