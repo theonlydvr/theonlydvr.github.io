@@ -1,7 +1,7 @@
 var presentations = [
   {
     "id": "neuromod-2024",
-    "img": "assets/img/pres/neuromod_2024.png",
+    "img": "assets/img/pres/neuromod_2024.jpg",
     "title": "Optimizing cognitive control with electrical stimulation",
     "file": "assets/pdf/neuromod_2024.pdf",
     "venue": "Minnesota Neuromodulation Symposium"
