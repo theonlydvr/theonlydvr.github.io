@@ -7,6 +7,7 @@ var publications = [
     "authors": "<b>Evan M. Dastin-van Rijn</b>, Joel Nielsen, Elizabeth M. Sachse, Christina Li, Megan E. Mensinger, Stefanie G. Simpson, Michelle C. Buccini, Francesca A. Iacobucci, David J. Titus, Alik S. Widge",
     "pdf": "assets/pdf/pybehave.pdf",
     "citation": "assets/bib/pybehave.bib",
+    "code": "https://github.com/tne-lab/py-behav-box-v2",
     "doi": "https://doi.org/10.21105/joss.06515"
   },
   {
