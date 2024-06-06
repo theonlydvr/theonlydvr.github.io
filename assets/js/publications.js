@@ -1,5 +1,15 @@
 var publications = [
   {
+    "id": "pybehave",
+    "img": "assets/img/pubs/pybehave.png",
+    "title": "Pybehave: a hardware agnostic, Python-based framework for controlling behavioral neuroscience experiments",
+    "abstract": "This work presents our pybehave framework for developing behavioral tasks for use in experimental animal neuroscience. In contrast to other platforms, pybehave is built around a hardware-agnostic and highly object-oriented design philosophy.",
+    "authors": "<b>Evan M. Dastin-van Rijn</b>, Joel Nielsen, Elizabeth M. Sachse, Christina Li, Megan E. Mensinger, Stefanie G. Simpson, Michelle C. Buccini, Francesca A. Iacobucci, David J. Titus, Alik S. Widge",
+    "pdf": "assets/pdf/pybehave.pdf",
+    "citation": "assets/bib/pybehave.bib",
+    "doi": "https://doi.org/10.21105/joss.06515"
+  },
+  {
     "id": "setshift",
     "img": "assets/img/pubs/setshift.png",
     "title": "Cross-species modeling and enhancement of cognitive control with striatal brain stimulation",
