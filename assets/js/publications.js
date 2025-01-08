@@ -1,5 +1,26 @@
 var publications = [
   {
+    "id": "set_shift",
+    "img": "assets/img/pubs/set_shift.png",
+    "title": "Striatal stimulation enhances cognitive control and evidence processing in rodents and humans",
+    "abstract": "Brain disorders, in particular mental disorders, might be effectively treated by direct electrical brain stimulation, but clinical progress requires understanding of therapeutic mechanisms.",
+    "authors": "Adriano E Reimer<sup>†</sup>, <b>Evan M. Dastin-van Rijn</b><sup>†</sup>, Jaejoong Kim, Megan E Mensinger, Elizabeth M Sachse, Aaron Wald, Eric Hoskins, Kartikeya Singh, Abigail Alpers, Dawson Cooper, Meng-Chen Lo, Amanda Ribeiro de Oliveira, Gregory Simandl, Nathaniel Stephenson, Alik S Widge",
+    "pdf": "assets/pdf/set_shift.pdf",
+    "citation": "assets/bib/set_shift.bib",
+    "code": "https://github.com/tne-lab/SetShiftManuscript",
+    "doi": "https://doi.org/10.1126/scitranslmed.adp1723"
+  },
+  {
+    "id": "lfp_synthetic",
+    "img": "assets/img/pubs/lfp_synthetic.png",
+    "title": "Method for Synthetic Generation of LFP Data for Testing of Feature Extraction Algorithms",
+    "abstract": "Recent interest in closed-loop neuromodulation devices has driven development of algorithms capable of real-time biomarker extraction.",
+    "authors": "Heather J Breidenbach, Virginia Woods, Uisub Shin, <b>Evan Dastin-van Rijn</b>, Mahsa Shoaran, Alik S Widge",
+    "pdf": "assets/pdf/lfp_synthetic.pdf",
+    "citation": "assets/bib/lfp_synthetic.bib",
+    "doi": "https://doi.org/10.1109/EMBC53108.2024.10781522"
+  },
+  {
     "id": "pybehave",
     "img": "assets/img/pubs/pybehave.png",
     "title": "Pybehave: a hardware agnostic, Python-based framework for controlling behavioral neuroscience experiments",
@@ -9,16 +30,6 @@ var publications = [
     "citation": "assets/bib/pybehave.bib",
     "code": "https://github.com/tne-lab/py-behav-box-v2",
     "doi": "https://doi.org/10.21105/joss.06515"
-  },
-  {
-    "id": "setshift",
-    "img": "assets/img/pubs/setshift.png",
-    "title": "Cross-species modeling and enhancement of cognitive control with striatal brain stimulation",
-    "abstract": "Brain disorders, particularly mental disorders, might be effectively treated by direct electrical brain stimulation, but clinical progress requires understanding of therapeutic mechanisms.",
-    "authors": "Adriano E. Reimer<sup>†</sup>, <b>Evan M. Dastin-van Rijn</b><sup>†</sup>, Jaejoong Kim, Megan E Mensinger, Elizabeth M Sachse, Aaron Wald, Eric Hoskins, Kartikeya Singh, Abigail Alpers, Dawson Cooper, Meng-Chen Lo, Amanda R de Oliveira, Gregory Simandl, Nathanial Stephenson, Alik S. Widge",
-    "pdf": "assets/pdf/setshift.pdf",
-    "citation": "assets/bib/setshift.bib",
-    "biorxiv": "https://doi.org/10.1101/2024.02.16.580680"
   },
   {
     "id": "oscar",
