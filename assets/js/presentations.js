@@ -1,5 +1,12 @@
 var presentations = [
   {
+    "id": "neuromod-2025",
+    "img": "assets/img/pres/neuromod_2025.png",
+    "title": "Acute effects of electricl stimulation on cognitive control",
+    "file": "assets/pdf/neuromod_2025.pdf",
+    "venue": "Minnesota Neuromodulation Symposium"
+  },
+  {
     "id": "neuromod-2024",
     "img": "assets/img/pres/neuromod_2024.jpg",
     "title": "Optimizing cognitive control with electrical stimulation",

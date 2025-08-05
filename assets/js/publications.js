@@ -1,5 +1,26 @@
 var publications = [
   {
+    "id": "sex_differences",
+    "img": "assets/img/pubs/sex_differences.png",
+    "title": "Sex-biased computations underlying differential set shift performance in mice",
+    "abstract": "Cognitive flexibility can be defined as the ability to adaptively shift between choices or strategies based on environmental feedback and it is disrupted in numerous neuropsychiatric conditions. Individual differences in the computations supporting cognitive flexibility are poised to reveal mechanisms of neuropsychiatric risk and resilience.",
+    "authors": "Nic Glewwe, <b>Evan M. Dastin-van Rijn</b>, Cathy S. Chen, Erin Giglio, Evan Knep, R. Becket Ebitz, Alik S. Widge, and Nicole M. Grissom",
+    "pdf": "assets/pdf/sex_differences.pdf",
+    "citation": "assets/bib/sex_differences.bib",
+    "biorxiv": "https://doi.org/10.1101/2025.04.01.646712"
+  },
+  {
+    "id": "simulation_optimization",
+    "img": "assets/img/pubs/simulation_optimization.png",
+    "title": "Failure modes and mitigations for Bayesian optimization of neuromodulation parameters",
+    "abstract": "Precision medicine holds substantial promise for tailoring neuromodulation techniques to the symptomatology of individual patients. Precise selection of stimulation parameters for individual patients requires the development of robust optimization techniques.",
+    "authors": "<b>Evan M. Dastin-van Rijn</b> and Alik S. Widge",
+    "pdf": "assets/pdf/simulation_optimization.pdf",
+    "citation": "assets/bib/simulation_optimization.bib",
+    "code": "https://github.com/tne-lab/NeuroOptimizationPaper",
+    "doi": "https://doi.org/10.1088/1741-2552/ade189"
+  },
+  {
     "id": "set_shift",
     "img": "assets/img/pubs/set_shift.png",
     "title": "Striatal stimulation enhances cognitive control and evidence processing in rodents and humans",
