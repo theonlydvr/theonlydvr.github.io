@@ -1,7 +1,7 @@
 var publications = [
   {
     "id": "sex_differences",
-    "img": "assets/img/pubs/sex_differences.png",
+    "img": "assets/img/pubs/sex_differences.jpg",
     "title": "Sex-biased computations underlying differential set shift performance in mice",
     "abstract": "Cognitive flexibility can be defined as the ability to adaptively shift between choices or strategies based on environmental feedback and it is disrupted in numerous neuropsychiatric conditions. Individual differences in the computations supporting cognitive flexibility are poised to reveal mechanisms of neuropsychiatric risk and resilience.",
     "authors": "Nic Glewwe, <b>Evan M. Dastin-van Rijn</b>, Cathy S. Chen, Erin Giglio, Evan Knep, R. Becket Ebitz, Alik S. Widge, and Nicole M. Grissom",
@@ -11,7 +11,7 @@ var publications = [
   },
   {
     "id": "simulation_optimization",
-    "img": "assets/img/pubs/simulation_optimization.png",
+    "img": "assets/img/pubs/simulation_optimization.jpg",
     "title": "Failure modes and mitigations for Bayesian optimization of neuromodulation parameters",
     "abstract": "Precision medicine holds substantial promise for tailoring neuromodulation techniques to the symptomatology of individual patients. Precise selection of stimulation parameters for individual patients requires the development of robust optimization techniques.",
     "authors": "<b>Evan M. Dastin-van Rijn</b> and Alik S. Widge",
