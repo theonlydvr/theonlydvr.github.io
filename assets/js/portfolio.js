@@ -1,5 +1,11 @@
 var portfolio = [
   {
+    "name": "Advent of Code 2024",
+    "type": "other",
+    "thumb": "assets/img/gallery/thumb/aoc_2024.jpg",
+    "link": "https://github.com/theonlydvr/Competitions/tree/main/AoC2024"
+  },
+  {
     "name": "Advent of Code 2023",
     "type": "other",
     "thumb": "assets/img/gallery/thumb/aoc_2023.png",
